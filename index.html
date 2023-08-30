@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Gorib - Electronics Store</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <section class="topBar">
+                <p>Hot days! - 50% Get ready for summer!</p>
+                <ul>
+                    <li><a href="#">Order Tracking</a></li>
+                    <hr>
+                    <li><a href="#">About Us</a></li>
+                    <hr>
+                    <li><a href="#">Contact Us</a></li>
+                    <hr>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </section>
+            <section class="sticky-bar">
+                <div class="desktopBar">
+                    <div class="right">
+                        <div class="logoBox">
+                            <a href="#"><img src="./image/Logo.png" alt=""></a>
+                        </div>
+                        <div class="helpBox">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            <span>Need help?<span class="sub">+880000000</span></span>
+                        </div>
+                        <div class="searchBox">
+                            <input type="search" id="search" placeholder="Search product...">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="left">
+                        <div class="accountBox">
+                            <a href="#"><i class="fa-regular fa-user"></i>
+                                <span>Login
+                                    <span class="sub">My Account</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="wishBox">
+                            <a href="#"><i class="fa-regular fa-star"></i>
+                                <span>Favorite<span class="sub">My Wishlist</span></span>
+                            </a>
+                        </div>
+                        <div class="CartBox">
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i>
+                                <span>Cart<span class="sub">$0.00</span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mobileBar">
+                <div class="container">
+                    <div class="menu-box">
+                        <i id="menu-bar" class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="logoBox">
+                        <a href="#"><img src="./image/Logo.png" alt=""></a>
+                    </div>
+                    <div class="icon-bar">
+                        <div>
+                            <a href="#"> <i class="fa-solid fa-braille"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-sidebar hidden">
+                    <div class="close-menu">
+                        <i id="close-bar" class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="menu">
+                        <ul class="navlinks">
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+                                <i class="fa-solid fa-chevron-right" onclick="
+                                    showSubMenu(1)"></i>
+                            </li>
+                            <div class="divider"></div>
+                            <li class="dropdown">
+                                <a href="#">Shop</a>
+                                <i class="fa-solid fa-chevron-right" onclick="
+                                    showSubMenu(2)"></i>
+                            </li>
+                            <div class="divider"></div>
+                            <li class="dropdown">
+                                <a href="#">Products</a>
+                                <i class="fa-solid fa-chevron-right" onclick="
+                                    showSubMenu(3)"></i>
+                            </li>
+                            <div class="divider"></div>
+                            <li class="dropdown">
+                                <a href="#">Blog</a>
+                                <i class="fa-solid fa-chevron-right" onclick="
+                                showSubMenu(4)"></i>
+                            </li>
+                            <div class="divider"></div>
+                            <li class="dropdown">
+                                <a href="#">Page</a>
+                                <i class="fa-solid fa-chevron-right" onclick="showSubMenu(5)"></i>
+                            </li>
+                        </ul>
+                        <div class="sub-list">
+                            <p id="title"> <i class="fa-solid fa-chevron-left"></i>
+                                <a href="#">Home
+                                </a>
+                            </p>
+                            <div class="submenu1 hidden">
+                                <li><a href="#">Home1</a></li>
+                                <li><a href="#">Home2</a></li>
+                                <li><a href="#">Home3</a></li>
+                                <li><a href="#">Home4</a></li>
+                                <li><a href="#">Home5</a></li>
+                                <li><a href="#">Home6</a></li>
+                                <li><a href="#">Home7</a></li>
+                                <li><a href="#">Home8</a></li>
+                            </div>
+                            <div class="submenu2 hidden">
+                                <section class="shop-sub">
+                                    <div>
+                                        <p>Shop Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Filter Layout</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Hover Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Design Pages</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Checkout Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Mini Cart</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="submenu3 hidden">
+                                <section class="shop-sub">
+                                    <div>
+                                        <p>Shop Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Filter Layout</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Hover Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Design Pages</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Checkout Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Mini Cart</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="submenu4 hidden">
+                                <section class="shop-sub">
+                                    <div>
+                                        <p>Shop Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Filter Layout</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Hover Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Design Pages</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Checkout Style</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Mini Cart</p>
+                                        <ul>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                            <li><a href="#">Shop Full</a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="submenu5 hidden">
+                                <li><a href="#">Home1</a></li>
+                                <li><a href="#">Home2</a></li>
+                                <li><a href="#">Home3</a></li>
+                                <li><a href="#">Home4</a></li>
+                                <li><a href="#">Home5</a></li>
+                                <li><a href="#">Home6</a></li>
+                                <li><a href="#">Home7</a></li>
+                                <li><a href="#">Home8</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="#"><i class="fa-regular fa-user"></i><span>Login or Register</span></a>
+                    </div>
+                </div>
+                <div class="header-fixed">
+                    <div class="shop-box">
+                        <a href="#"> <i class="fa-solid fa-border-all"></i></a>
+                        <p>Shop</p>
+                    </div>
+                    <div class="account-box">
+                        <a href="#"> <i class="fa-regular fa-user"></i></a>
+                        <p>Account</p>
+                    </div>
+                    <div class="search-box">
+                        <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+                        <p>Search</p>
+                    </div>
+                    <div class="wishlist-box">
+                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                        <p>Wishlist</p>
+                    </div>
+                </div>
+            </section>
+            <section class="bottomBar">
+                <div class="left">
+                    <div class="browse">
+                        <i class="fa-solid fa-braille"></i>
+                        <p>Browse All Categories</p>
+                    </div>
+                    <div class="nav-links">
+                        <ul class="navLink">
+                            <li class="dropdown">
+                                <a href="#" class="title"><span>Home</span><i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Home1</a></li>
+                                        <li><a href="#">Home2</a></li>
+                                        <li><a href="#">Home3</a></li>
+                                        <li><a href="#">Home4</a></li>
+                                        <li><a href="#">Home5</a></li>
+                                        <li><a href="#">Home6</a></li>
+                                        <li><a href="#">Home7</a></li>
+                                        <li><a href="#">Home8</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="title"><span>Shop</span><i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub-menu">
+                                    <section class="shop-sub">
+                                        <div>
+                                            <p>Shop Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Filter Layout</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Design Pages</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Mini Cart</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Hover Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Checkout Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="title"><span>Products</span><i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub-menu">
+                                    <section class="shop-sub">
+                                        <div>
+                                            <p>Product Featured</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Product Type</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Hover Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Design Pages</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Checkout Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Mini Cart</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="title"><span>Blog</span><i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub-menu">
+                                    <section class="shop-sub">
+                                        <div>
+                                            <p>Shop Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Filter Layout</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Hover Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Design Pages</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Checkout Style</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Mini Cart</p>
+                                            <ul>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                                <li><a href="#">Shop Full</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="title"><span>Page</span><i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Home1</a></li>
+                                        <li><a href="#">Home2</a></li>
+                                        <li><a href="#">Home3</a></li>
+                                        <li><a href="#">Home4</a></li>
+                                        <li><a href="#">Home5</a></li>
+                                        <li><a href="#">Home6</a></li>
+                                        <li><a href="#">Home7</a></li>
+                                        <li><a href="#">Home8</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <a href="#">Extra Sell <span>30%</span> Off</a>
+                        <span><i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="hero">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./image/banner-1.jpg" style="width: 100%;">
+                    <div class="text">
+                        <article>
+                            <span class="title">New 2023</span>
+                            <p class="para"><span>Macbook Pro </span>More Powerful then ever</p>
+                            <button class="btn">Shop Now</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./image/banner-2.jpg" style="width: 100%;">
+                    <div class="text">
+                        <article>
+                            <span class="title">New 2023</span>
+                            <p class="para"><span>Macbook Pro </span>More Powerful then ever</p>
+                            <button class="btn">Shop Now</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./image/banner-1.jpg" style="width: 100%;">
+                    <div class="text">
+                        <article>
+                            <span class="title">New 2023</span>
+                            <p class="para"><span>Macbook Pro </span>More Powerful then ever</p>
+                            <button class="btn">Shop Now</button>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="shop-category">
+            <div class="cate">
+                <h1>Shopping by Categories</h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./image/img-1.jpg" alt="">
+                            <a href="#">Watches</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-2.jpg" alt="">
+                            <a href="#">Computers</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-3.jpg" alt="">
+                            <a href="#">Smartphones</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-4.jpg" alt="">
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-5.jpg" alt="">
+                            <a href="#">TV / Audio</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-6.jpg" alt="">
+                            <a href="#">Home Smart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/img-7.jpg" alt="">
+                            <a href="#">Game & Videos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bestitem">
+            <div class="cardContain">
+                <div class="card card-1">
+                    <div>
+                        <img src="./image/banner-1.jpg" alt="">
+                    </div>
+                    <article>
+                        <div class="text">
+                            <span>Digital PC</span>
+                            <h1>PC & Docking Station</h1>
+                            <p>Discover now, just from $399</p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="card card-2">
+                    <div>
+                        <img src="./image/banner-2.jpg" alt="">
+                    </div>
+                    <article>
+                        <div class="text">
+                            <span>Headphones</span>
+                            <h1 style="color: #000;">On-sale Best Prices</h1>
+                            <p style="color: #000;">Limited Time: Online Only!</p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <section>
+                <div class="get-touch">
+                    <h2>Get in touch</h2>
+                    <p>Call Us 24/7 Free</p>
+                    <a href="#" class="mobNum">1800000222</a>
+                    <address>60, 29th Street, San Francisco, CA 94110, United States</address>
+                    <a href="#">support@arostore.com</a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h2>Information</h2>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h2>Useful Links</h2>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                    </ul>
+                </div>
+            </section>
+            <article>
+                <div>
+                    <p>&copy; 2023 Aro Store.All Rights Reserved.</p>
+                </div>
+                <div>
+                    <img src="./image/payments.png" alt="">
+                </div>
+            </article>
+
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

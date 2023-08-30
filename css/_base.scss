@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+
+a {
+  color: #7e7e7e;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffb300;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  overflow-x: hidden;
+}
