@@ -506,41 +506,67 @@ li {
       .bestitem .cardContain .card img {
         width: 100%;
         border-radius: .6rem; }
-  .bestitem article {
-    font-size: 1.5rem;
-    width: 100%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    bottom: auto;
-    transform: translateY(-50%);
-    display: flex;
-    padding: 0 0 0 5rem; }
-    .bestitem article .text span {
-      display: inline-block;
-      color: #000;
-      background: #ffb300;
-      border-radius: .6rem;
-      padding: .75rem;
-      margin-bottom: 2rem; }
-    .bestitem article .text h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem; }
-    .bestitem article .text p {
-      margin-bottom: 2.5rem; }
-    .bestitem article .text a {
-      display: inline-block;
-      font-weight: 700;
-      color: #000;
-      background-color: #fff;
-      border-radius: .6rem;
-      padding: 1.5rem 5rem; }
-      .bestitem article .text a:hover {
-        color: #fff;
-        background-color: #ffb300; }
+    .bestitem .cardContain article {
+      font-size: 1.5rem;
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      bottom: auto;
+      transform: translateY(-50%);
+      display: flex;
+      padding: 0 0 0 5rem; }
+      .bestitem .cardContain article .text span {
+        display: inline-block;
+        color: #000;
+        background: #ffb300;
+        border-radius: .6rem;
+        padding: .75rem;
+        margin-bottom: 2rem; }
+      .bestitem .cardContain article .text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .bestitem .cardContain article .text p {
+        margin-bottom: 2.5rem; }
+      .bestitem .cardContain article .text a {
+        display: inline-block;
+        font-weight: 700;
+        color: #000;
+        background-color: #fff;
+        border-radius: .6rem;
+        padding: 1.5rem 5rem; }
+        .bestitem .cardContain article .text a:hover {
+          color: #fff;
+          background-color: #ffb300; }
 
+@media (max-width: 992px) {
+  .bestitem .cardContain {
+    flex-direction: column; }
+    .bestitem .cardContain .card {
+      width: 100%; } }
+@media (max-width: 768px) {
+  .bestitem {
+    margin: 3rem auto;
+    padding: 2rem; }
+    .bestitem .cardContain {
+      gap: 2rem; } }
+@media (max-width: 500px) {
+  .shop-category .cate h1 {
+    font-size: 2.5rem; }
+
+  .bestitem {
+    padding: .5rem; }
+    .bestitem .cardContain {
+      gap: 1rem; }
+      .bestitem .cardContain article {
+        font-size: 1.25rem;
+        padding: 0 0 0 2.5rem; }
+        .bestitem .cardContain article .text h1 {
+          font-size: 2.5rem; }
+        .bestitem .cardContain article .text a {
+          padding: 1rem 2.25rem; } }
 .footer {
   padding: 2rem 0;
   position: relative; }

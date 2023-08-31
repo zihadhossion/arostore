@@ -63,8 +63,6 @@
       }
     }
   }
-
-
 }
 
 .bestitem {
@@ -84,53 +82,113 @@
         border-radius: .6rem;
       }
     }
-  }
 
-  article {
-    font-size: 1.5rem;
-    width: 100%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    bottom: auto;
-    transform: translateY(-50%);
-    display: flex;
-    padding: 0 0 0 5rem;
+    article {
+      font-size: 1.5rem;
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      bottom: auto;
+      transform: translateY(-50%);
+      display: flex;
+      padding: 0 0 0 5rem;
 
-    .text {
-      span {
-        display: inline-block;
-        color: #000;
-        background: #ffb300;
-        border-radius: .6rem;
-        padding: .75rem;
-        margin-bottom: 2rem;
-      }
+      .text {
+        span {
+          display: inline-block;
+          color: #000;
+          background: #ffb300;
+          border-radius: .6rem;
+          padding: .75rem;
+          margin-bottom: 2rem;
+        }
 
-      h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
+        h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
 
-      p {
-        margin-bottom: 2.5rem;
-      }
+        p {
+          margin-bottom: 2.5rem;
+        }
 
-      a {
-        display: inline-block;
-        font-weight: 700;
-        color: #000;
-        background-color: #fff;
-        border-radius: .6rem;
-        padding: 1.5rem 5rem;
+        a {
+          display: inline-block;
+          font-weight: 700;
+          color: #000;
+          background-color: #fff;
+          border-radius: .6rem;
+          padding: 1.5rem 5rem;
 
-        &:hover {
-          color: #fff;
-          background-color: #ffb300;
+          &:hover {
+            color: #fff;
+            background-color: #ffb300;
+          }
         }
       }
     }
+  }
+
+
+}
+
+@media (max-width:992px) {
+  .bestitem {
+    .cardContain {
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .bestitem {
+    margin: 3rem auto;
+    padding: 2rem;
+
+    .cardContain {
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width:500px) {
+  .shop-category {
+    .cate {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .bestitem {
+    padding: .5rem;
+
+    .cardContain {
+      gap: 1rem;
+
+      article {
+        font-size: 1.25rem;
+        padding: 0 0 0 2.5rem;
+
+        .text {
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          a {
+            padding: 1rem 2.25rem;
+          }
+        }
+      }
+    }
+
+
   }
 }
