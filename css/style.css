@@ -566,6 +566,45 @@ li {
         display: flex;
         justify-content: center; }
 
+.new-item {
+  height: 100%;
+  padding: 3rem; }
+  .new-item .item {
+    border-radius: .5rem;
+    position: relative; }
+    .new-item .item article {
+      font-size: 1.5rem;
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translateY(-50%);
+      padding: 0 0 0 5rem; }
+      .new-item .item article span {
+        display: inline-block;
+        color: #000;
+        background: #ffb300;
+        border-radius: .6rem;
+        padding: .75rem;
+        margin-bottom: 2rem; }
+      .new-item .item article h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .new-item .item article p {
+        margin-bottom: 2.5rem; }
+      .new-item .item article a {
+        display: inline-block;
+        font-weight: 700;
+        color: #000;
+        background-color: #fff;
+        border-radius: .6rem;
+        padding: 1.5rem 5rem; }
+        .new-item .item article a:hover {
+          color: #fff;
+          background-color: #ffb300; }
+
 @media (max-width: 992px) {
   .bestitem .cardContain {
     flex-direction: column; }
@@ -576,7 +615,15 @@ li {
     margin: 3rem auto;
     padding: 2rem; }
     .bestitem .cardContain {
-      gap: 2rem; } }
+      gap: 2rem; }
+
+  .new-item {
+    padding: 1rem; }
+    .new-item .item article {
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      padding: .1rem; } }
 @media (max-width: 500px) {
   .shop-category .cate h1 {
     font-size: 2.5rem; }
@@ -591,7 +638,10 @@ li {
         .bestitem .cardContain article .text h1 {
           font-size: 2.5rem; }
         .bestitem .cardContain article .text a {
-          padding: 1rem 2.25rem; } }
+          padding: 1rem 2.25rem; }
+
+  .new-item {
+    padding: .1rem; } }
 .footer {
   padding: 2rem 0;
   position: relative; }
