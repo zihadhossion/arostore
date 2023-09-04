@@ -477,13 +477,6 @@ li {
       border-radius: 50%; }
       .shop-category .cate .swiper-slide img:hover {
         animation: moveLR .35s ease-in-out 2; }
-@keyframes moveLR {
-  0% {
-    transform: translateX(0px); }
-  50% {
-    transform: translateX(10px); }
-  100% {
-    transform: translateX(0px); } }
     .shop-category .cate .swiper-slide a {
       display: block;
       color: #000;
@@ -542,9 +535,12 @@ li {
           background-color: #ffb300; }
 
 .top-sell {
-  background-color: #F7F6F1; }
+  background-color: #F7F6F1;
+  width: 100%;
+  margin: 0 auto; }
   .top-sell .item-container {
     display: flex;
+    justify-content: center;
     gap: 3rem;
     padding: 1rem; }
     .top-sell .item-container .item {
@@ -562,16 +558,51 @@ li {
         padding: .5rem; }
       .top-sell .item-container .item img {
         width: 25rem; }
-      .top-sell .item-container .item .product-btn ul {
-        display: flex;
-        justify-content: center; }
+      .top-sell .item-container .item .product-btn {
+        visibility: hidden;
+        margin-bottom: 1rem; }
+        .top-sell .item-container .item .product-btn ul {
+          display: flex;
+          justify-content: center;
+          gap: 1rem; }
+          .top-sell .item-container .item .product-btn ul li {
+            background: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: .5rem;
+            padding: .5rem;
+            box-shadow: 1px 1px 5px 2px #F7F6F5; }
+            .top-sell .item-container .item .product-btn ul li:hover {
+              color: #fff;
+              background: #ffb300; }
+      .top-sell .item-container .item:hover .product-btn {
+        visibility: visible;
+        animation: showUp .25s linear; }
+      .top-sell .item-container .item .title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: .75rem; }
+      .top-sell .item-container .item .review {
+        color: #ffb300;
+        font-size: 1.2rem;
+        margin-bottom: 2rem; }
+      .top-sell .item-container .item .price {
+        font-size: 1.8rem;
+        font-weight: 700; }
+        .top-sell .item-container .item .price span {
+          color: #7e7e7e;
+          font-weight: 400;
+          text-decoration: line-through;
+          margin-left: .5rem; }
 
 .new-item {
   height: 100%;
   padding: 3rem; }
   .new-item .item {
-    border-radius: .5rem;
     position: relative; }
+    .new-item .item img {
+      width: 100%;
+      border-radius: .5rem; }
     .new-item .item article {
       font-size: 1.5rem;
       width: 100%;
@@ -605,6 +636,77 @@ li {
           color: #fff;
           background-color: #ffb300; }
 
+.forYou {
+  background: #F7F6F1;
+  margin: 0 auto; }
+  .forYou .cContain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem; }
+    .forYou .cContain .item {
+      width: 100%;
+      max-width: 200px;
+      font-size: 2rem;
+      background-color: #fff;
+      text-align: center; }
+      .forYou .cContain .item .dis {
+        width: 35%;
+        display: block;
+        text-align: left;
+        background: #2A27E9;
+        padding: .5rem; }
+      .forYou .cContain .item img {
+        width: 95%; }
+      .forYou .cContain .item .product-btn {
+        visibility: hidden;
+        margin-bottom: 1rem; }
+        .forYou .cContain .item .product-btn ul {
+          display: flex;
+          justify-content: center;
+          gap: 1rem; }
+          .forYou .cContain .item .product-btn ul li {
+            background: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: .5rem;
+            padding: .5rem;
+            box-shadow: 1px 1px 5px 2px #F7F6F5; }
+            .forYou .cContain .item .product-btn ul li:hover {
+              color: #fff;
+              background: #ffb300; }
+      .forYou .cContain .item:hover .product-btn {
+        visibility: visible;
+        animation: showUp .25s linear; }
+      .forYou .cContain .item .title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: .75rem; }
+      .forYou .cContain .item .review {
+        color: #ffb300;
+        font-size: 1.2rem;
+        margin-bottom: 2rem; }
+      .forYou .cContain .item .price {
+        font-size: 1.8rem;
+        font-weight: 700; }
+        .forYou .cContain .item .price span {
+          color: #7e7e7e;
+          font-weight: 400;
+          text-decoration: line-through;
+          margin-left: .5rem; }
+
+@keyframes moveLR {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(10px); }
+  100% {
+    transform: translateX(0px); } }
+@keyframes showUp {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @media (max-width: 992px) {
   .bestitem .cardContain {
     flex-direction: column; }
