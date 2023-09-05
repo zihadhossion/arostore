@@ -696,6 +696,9 @@ li {
           text-decoration: line-through;
           margin-left: .5rem; }
 
+.brand div:hover {
+  animation: moveLR .25s linear; }
+
 @keyframes moveLR {
   0% {
     transform: translateX(0px); }

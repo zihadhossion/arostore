@@ -359,6 +359,14 @@
   }
 }
 
+.brand {
+  div {
+    &:hover {
+      animation: moveLR .25s linear;
+    }
+  }
+}
+
 //animation is here
 @keyframes moveLR {
   0% {
