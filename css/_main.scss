@@ -261,6 +261,7 @@
         background-color: #fff;
         border-radius: .6rem;
         padding: 1.5rem 5rem;
+        transition: all .25s linear;
 
         &:hover {
           color: #fff;
@@ -276,8 +277,8 @@
   margin: 0 auto;
 
   .cContain {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 3rem;
 
