@@ -639,12 +639,17 @@ li {
 
 .forYou {
   background: #F7F6F1;
-  margin: 0 auto; }
+  padding: 3rem 30rem; }
+  .forYou .mtitle {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 7rem; }
   .forYou .cContain {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 3rem; }
+    justify-items: center;
+    gap: 2.5rem; }
     .forYou .cContain .item {
       width: 100%;
       max-width: 200px;
@@ -696,8 +701,20 @@ li {
           text-decoration: line-through;
           margin-left: .5rem; }
 
-.brand div:hover {
-  animation: moveLR .25s linear; }
+.brand {
+  text-align: left;
+  margin-top: 3rem;
+  padding: 3rem 5rem;
+  background: #fff; }
+  .brand h1 {
+    font-size: 3rem;
+    margin-left: 10rem;
+    margin-bottom: 5rem; }
+  .brand .brandCon {
+    display: flex;
+    justify-content: center; }
+    .brand .brandCon div:hover {
+      animation: moveLR .35s linear 2; }
 
 @keyframes moveLR {
   0% {
