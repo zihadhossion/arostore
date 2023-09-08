@@ -529,7 +529,8 @@ li {
         color: #000;
         background-color: #fff;
         border-radius: .6rem;
-        padding: 1.5rem 5rem; }
+        padding: 1.5rem 5rem;
+        transition: all .25s linear; }
         .bestitem .cardContain article .text a:hover {
           color: #fff;
           background-color: #ffb300; }
@@ -537,12 +538,17 @@ li {
 .top-sell {
   background-color: #F7F6F1;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 7rem; }
+  .top-sell .title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center; }
   .top-sell .item-container {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    padding: 1rem; }
+    padding: 10rem; }
     .top-sell .item-container .item {
       width: 100%;
       max-width: 400px;
@@ -639,67 +645,72 @@ li {
 
 .forYou {
   background: #F7F6F1;
-  padding: 3rem 30rem; }
+  padding: 3rem; }
   .forYou .mtitle {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 7rem; }
-  .forYou .cContain {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 2.5rem; }
-    .forYou .cContain .item {
-      width: 100%;
-      max-width: 200px;
-      font-size: 2rem;
-      background-color: #fff;
-      text-align: center; }
-      .forYou .cContain .item .dis {
-        width: 35%;
-        display: block;
-        text-align: left;
-        background: #2A27E9;
-        padding: .5rem; }
-      .forYou .cContain .item img {
-        width: 95%; }
-      .forYou .cContain .item .product-btn {
-        visibility: hidden;
-        margin-bottom: 1rem; }
-        .forYou .cContain .item .product-btn ul {
-          display: flex;
-          justify-content: center;
-          gap: 1rem; }
-          .forYou .cContain .item .product-btn ul li {
-            background: #fff;
-            width: 35px;
-            height: 35px;
-            border-radius: .5rem;
-            padding: .5rem;
-            box-shadow: 1px 1px 5px 2px #F7F6F5; }
-            .forYou .cContain .item .product-btn ul li:hover {
-              color: #fff;
-              background: #ffb300; }
-      .forYou .cContain .item:hover .product-btn {
-        visibility: visible;
-        animation: showUp .25s linear; }
-      .forYou .cContain .item .title {
-        font-size: 1.6rem;
-        font-weight: 700;
-        margin-bottom: .75rem; }
-      .forYou .cContain .item .review {
-        color: #ffb300;
-        font-size: 1.2rem;
-        margin-bottom: 2rem; }
-      .forYou .cContain .item .price {
-        font-size: 1.8rem;
-        font-weight: 700; }
-        .forYou .cContain .item .price span {
-          color: #7e7e7e;
-          font-weight: 400;
-          text-decoration: line-through;
-          margin-left: .5rem; }
+  .forYou .innerCon {
+    display: flex;
+    justify-content: center; }
+    .forYou .innerCon .cContain {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem; }
+      .forYou .innerCon .cContain .item {
+        width: 100%;
+        max-width: 250px;
+        font-size: 2rem;
+        background-color: #fff;
+        text-align: center;
+        padding: 1rem; }
+        .forYou .innerCon .cContain .item .dis {
+          width: 45px;
+          display: block;
+          text-align: left;
+          font-size: 1.25rem;
+          color: #fff;
+          background: #2A27E9;
+          padding: .5rem; }
+        .forYou .innerCon .cContain .item img {
+          width: 95%; }
+        .forYou .innerCon .cContain .item .product-btn {
+          visibility: hidden;
+          margin-bottom: 1rem; }
+          .forYou .innerCon .cContain .item .product-btn ul {
+            display: flex;
+            justify-content: center;
+            gap: 1rem; }
+            .forYou .innerCon .cContain .item .product-btn ul li {
+              background: #fff;
+              width: 35px;
+              height: 35px;
+              border-radius: .5rem;
+              padding: .5rem;
+              box-shadow: 1px 1px 5px 2px #F7F6F5; }
+              .forYou .innerCon .cContain .item .product-btn ul li:hover {
+                color: #fff;
+                background: #ffb300; }
+        .forYou .innerCon .cContain .item:hover .product-btn {
+          visibility: visible;
+          animation: showUp .25s linear; }
+        .forYou .innerCon .cContain .item .card-title {
+          font-size: 1.6rem;
+          font-weight: 700;
+          margin-bottom: .75rem; }
+        .forYou .innerCon .cContain .item .review {
+          color: #ffb300;
+          font-size: 1.2rem;
+          margin-bottom: 2rem; }
+        .forYou .innerCon .cContain .item .price {
+          font-size: 1.8rem;
+          font-weight: 700; }
+          .forYou .innerCon .cContain .item .price span {
+            color: #7e7e7e;
+            font-weight: 400;
+            text-decoration: line-through;
+            margin-left: .5rem; }
 
 .brand {
   text-align: left;
@@ -714,7 +725,7 @@ li {
     display: flex;
     justify-content: center; }
     .brand .brandCon div:hover {
-      animation: moveLR .35s linear 2; }
+      animation: moveLR .35s ease-in-out 2; }
 
 @keyframes moveLR {
   0% {
@@ -732,7 +743,25 @@ li {
   .bestitem .cardContain {
     flex-direction: column; }
     .bestitem .cardContain .card {
-      width: 100%; } }
+      width: 100%; }
+
+  .top-sell {
+    padding: 3rem; }
+    .top-sell .item-container {
+      flex-wrap: wrap;
+      padding: 3rem; }
+
+  .new-item {
+    padding: 1.5rem; }
+    .new-item .item article {
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      padding: .1rem; }
+
+  .forYou .innerCon .cContain {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem; } }
 @media (max-width: 768px) {
   .bestitem {
     margin: 3rem auto;
@@ -740,13 +769,29 @@ li {
     .bestitem .cardContain {
       gap: 2rem; }
 
+  .top-sell {
+    padding: 2rem; }
+    .top-sell .item-container {
+      padding: 1rem; }
+
   .new-item {
     padding: 1rem; }
     .new-item .item article {
-      top: 50%;
-      left: 5%;
-      transform: translateY(-50%);
-      padding: .1rem; } }
+      font-size: 1.25rem; }
+      .new-item .item article span {
+        padding: .5rem;
+        margin-bottom: 1rem; }
+      .new-item .item article h1 {
+        font-size: 2.5rem;
+        margin-bottom: .75rem; }
+      .new-item .item article p {
+        margin-bottom: 2rem; }
+      .new-item .item article a {
+        padding: 1rem 3rem; }
+
+  .forYou .innerCon .cContain {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem; } }
 @media (max-width: 500px) {
   .shop-category .cate h1 {
     font-size: 2.5rem; }
@@ -763,8 +808,45 @@ li {
         .bestitem .cardContain article .text a {
           padding: 1rem 2.25rem; }
 
+  .top-sell {
+    padding: .5rem; }
+    .top-sell .item-container {
+      padding: .5rem; }
+
   .new-item {
-    padding: .1rem; } }
+    padding: .1rem; }
+    .new-item .item article {
+      font-size: 1rem; }
+      .new-item .item article span {
+        padding: .25rem .5rem;
+        margin-bottom: .5rem; }
+      .new-item .item article h1 {
+        font-size: 2rem;
+        margin-bottom: .5rem; }
+      .new-item .item article p {
+        margin-bottom: 1.5rem; }
+      .new-item .item article a {
+        padding: .75rem 2rem; }
+
+  .forYou .mtitle {
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .forYou .innerCon .cContain {
+    grid-template-columns: 1fr; } }
+@media (max-width: 300px) {
+  .new-item .item article {
+    font-size: .75rem; }
+    .new-item .item article span {
+      padding: .2rem;
+      border-radius: .3rem;
+      margin-bottom: .1rem; }
+    .new-item .item article h1 {
+      font-size: 1.5rem;
+      margin-bottom: .2rem; }
+    .new-item .item article p {
+      margin-bottom: .5rem; }
+    .new-item .item article a {
+      padding: .5rem 1.5rem; } }
 .footer {
   padding: 2rem 0;
   position: relative; }
@@ -818,6 +900,8 @@ li {
       margin-bottom: 2rem; }
       .footer section .get-touch .social {
         justify-content: center; }
+    .footer section .links {
+      text-align: center; }
     .footer section .links:first-child {
       grid-column: 1/2; }
   .footer article {
@@ -831,8 +915,6 @@ li {
     .footer section .get-touch {
       text-align: center;
       grid-column: 1/-1;
-      margin-bottom: 2rem; }
-    .footer section .links {
-      text-align: center; } }
+      margin-bottom: 2rem; } }
 
 /*# sourceMappingURL=style.css.map */

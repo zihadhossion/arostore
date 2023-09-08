@@ -69,10 +69,10 @@ function showSubMenu(step) {
   };
 }
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 6,
   centeredSlides: false,
-  spaceBetween: 1,
+  spaceBetween: 100,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false

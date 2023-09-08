@@ -84,6 +84,10 @@
         }
       }
 
+      .links {
+        text-align: center;
+      }
+
       .links:first-child {
         grid-column: 1/2;
       }
@@ -98,7 +102,6 @@
       }
     }
   }
-
 }
 
 @media (max-width: 500px) {
@@ -110,10 +113,6 @@
         text-align: center;
         grid-column: 1/-1;
         margin-bottom: 2rem;
-      }
-
-      .links {
-        text-align: center;
       }
     }
   }
