@@ -159,6 +159,7 @@
       .sub {
         color: black;
         font-weight: 700;
+        margin-top: .5rem;
         display: block;
 
         &:hover {
@@ -383,7 +384,7 @@
     gap: 5rem;
 
     .browse {
-      width: 250px;
+      width: 260px;
       font-size: 1.6rem;
       font-weight: 700;
       background: #ffb300;
@@ -429,6 +430,7 @@
 
           &:hover .sub-menu {
             display: block;
+            transition: all 1s ease-in-out;
           }
 
           .sub-menu {
@@ -441,6 +443,7 @@
             // top: 220%;
             z-index: 1;
             padding: 2.5rem 1.5rem;
+
 
             ul li {
               margin-bottom: 1.5rem;

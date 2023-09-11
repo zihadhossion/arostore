@@ -134,6 +134,7 @@ li {
     .desktopBar .left div .sub {
       color: black;
       font-weight: 700;
+      margin-top: .5rem;
       display: block; }
       .desktopBar .left div .sub:hover {
         color: #ffb300;
@@ -285,7 +286,7 @@ li {
     flex: 1;
     gap: 5rem; }
     .bottomBar .left .browse {
-      width: 250px;
+      width: 260px;
       font-size: 1.6rem;
       font-weight: 700;
       background: #ffb300;
@@ -317,7 +318,8 @@ li {
               margin-left: .75rem;
               align-self: center; }
           .bottomBar .left .nav-links .navLink .dropdown:hover .sub-menu {
-            display: block; }
+            display: block;
+            transition: all 1s ease-in-out; }
           .bottomBar .left .nav-links .navLink .dropdown .sub-menu {
             font-size: 1.4rem;
             display: none;
@@ -726,6 +728,37 @@ li {
     justify-content: center; }
     .brand .brandCon div:hover {
       animation: moveLR .35s ease-in-out 2; }
+
+.getNot {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: #fff; }
+  .getNot .getContain {
+    width: 600px; }
+    .getNot .getContain .title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center; }
+    .getNot .getContain form {
+      display: flex;
+      gap: 1rem;
+      margin-top: 10rem; }
+      .getNot .getContain form input,
+      .getNot .getContain form button {
+        height: 50px;
+        border: none;
+        border-radius: .6rem;
+        outline: none;
+        padding: 1rem 2rem;
+        box-shadow: 1px 0px 15px 1px #c0bdbd; }
+      .getNot .getContain form input {
+        width: 100%;
+        height: 50px; }
+      .getNot .getContain form button {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: #fff; }
 
 @keyframes moveLR {
   0% {
