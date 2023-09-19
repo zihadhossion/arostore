@@ -140,6 +140,77 @@ li {
         color: #ffb300;
         transition: color .2s linear; }
 
+.static-bar {
+  display: flex; }
+  .static-bar .nav-links {
+    align-self: center; }
+    .static-bar .nav-links .navLink {
+      display: flex;
+      gap: 3rem; }
+      .static-bar .nav-links .navLink .dropdown {
+        font-size: 1.5rem;
+        position: relative; }
+        .static-bar .nav-links .navLink .dropdown .title {
+          font-weight: 700;
+          color: #000;
+          display: flex;
+          transition: all .1s linear; }
+          .static-bar .nav-links .navLink .dropdown .title:hover {
+            color: #ffb300; }
+          .static-bar .nav-links .navLink .dropdown .title:hover .fa-chevron-down {
+            transform: rotate(180deg); }
+          .static-bar .nav-links .navLink .dropdown .title .fa-chevron-down {
+            font-size: .9rem;
+            margin-left: .75rem;
+            align-self: center; }
+        .static-bar .nav-links .navLink .dropdown:hover .sub-menu {
+          display: block;
+          transition: all 1s ease-in-out; }
+        .static-bar .nav-links .navLink .dropdown .sub-menu {
+          font-size: 1.4rem;
+          display: none;
+          min-width: 225px;
+          max-width: 1000px;
+          background: #ffffff;
+          position: absolute;
+          z-index: 1;
+          padding: 2.5rem 1.5rem; }
+          .static-bar .nav-links .navLink .dropdown .sub-menu ul li {
+            margin-bottom: 1.5rem; }
+          .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 3rem;
+            padding: 2.5rem 2rem; }
+            .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub p {
+              font-size: 1.6rem;
+              font-weight: 500;
+              color: #000;
+              width: 150px;
+              display: inline-block;
+              margin-bottom: 1.5rem; }
+            .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub div:first-child {
+              grid-row: 1/-1; }
+  .static-bar .icon-container {
+    display: flex; }
+    .static-bar .icon-container div a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #7e7e7e; }
+    .static-bar .icon-container div i {
+      color: #ffb300;
+      font-size: 2.8rem; }
+    .static-bar .icon-container div .sub {
+      color: black;
+      font-weight: 700;
+      margin-top: .5rem;
+      display: block; }
+      .static-bar .icon-container div .sub:hover {
+        color: #ffb300;
+        transition: color .2s linear; }
+
 .mobileBar {
   display: none; }
   .mobileBar a {
@@ -359,6 +430,39 @@ li {
         .bottomBar .right div a span {
           color: #ffb300; }
 
+@media (max-width: 1200px) {
+  .desktopBar .left {
+    flex: 1; }
+    .desktopBar .left div a span {
+      display: none; } }
+@media (max-width: 992px) {
+  .topBar {
+    display: none; }
+
+  .desktopBar {
+    display: none; }
+
+  .mobileBar {
+    display: block; }
+    .mobileBar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .mobileBar .header-fixed {
+      display: flex;
+      align-items: center; }
+
+  .bottomBar {
+    display: none; }
+
+  .hero .mySlides {
+    padding: 0.75rem 2rem 2rem 2rem; } }
+@media (max-width: 768px) {
+  .hero .mySlides {
+    padding: 0.5rem 1.75rem 1.75rem 1.75rem; } }
+@media (max-width: 500px) {
+  .hero .mySlides {
+    padding: 0.1rem 1rem 1rem 1rem; } }
 .hero {
   width: 100%;
   /* Slideshow container */
@@ -420,31 +524,7 @@ li {
     opacity: 0.4; }
   to {
     opacity: 1; } }
-@media (max-width: 1200px) {
-  .desktopBar .left {
-    flex: 1; }
-    .desktopBar .left div a span {
-      display: none; } }
 @media (max-width: 992px) {
-  .topBar {
-    display: none; }
-
-  .desktopBar {
-    display: none; }
-
-  .mobileBar {
-    display: block; }
-    .mobileBar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-    .mobileBar .header-fixed {
-      display: flex;
-      align-items: center; }
-
-  .bottomBar {
-    display: none; }
-
   .hero .mySlides {
     padding: 0.75rem 2rem 2rem 2rem; } }
 @media (max-width: 768px) {
