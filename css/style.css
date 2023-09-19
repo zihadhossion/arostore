@@ -43,16 +43,6 @@ li {
         color: #ffb300;
         transition: color .25s linear; }
 
-.scrolled {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000; }
-  .scrolled .desktopBar {
-    margin-top: 0rem !important; }
-
 .desktopBar {
   background: #ffffff;
   display: flex;
@@ -140,16 +130,37 @@ li {
         color: #ffb300;
         transition: color .2s linear; }
 
+.scrolled {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; }
+  .scrolled .desktopBar {
+    margin-top: 0rem !important; }
+
+.sticky-bar {
+  display: none;
+  background: #fff; }
+
 .static-bar {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem; }
+  .static-bar .logoBox {
+    align-self: center; }
+    .static-bar .logoBox img {
+      max-width: 30rem;
+      width: 100%; }
   .static-bar .nav-links {
     align-self: center; }
     .static-bar .nav-links .navLink {
       display: flex;
+      position: relative;
       gap: 3rem; }
       .static-bar .nav-links .navLink .dropdown {
-        font-size: 1.5rem;
-        position: relative; }
+        font-size: 1.5rem; }
         .static-bar .nav-links .navLink .dropdown .title {
           font-weight: 700;
           color: #000;
@@ -173,6 +184,8 @@ li {
           max-width: 1000px;
           background: #ffffff;
           position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
           z-index: 1;
           padding: 2.5rem 1.5rem; }
           .static-bar .nav-links .navLink .dropdown .sub-menu ul li {
@@ -193,23 +206,17 @@ li {
             .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub div:first-child {
               grid-row: 1/-1; }
   .static-bar .icon-container {
-    display: flex; }
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; }
     .static-bar .icon-container div a {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      color: #7e7e7e; }
-    .static-bar .icon-container div i {
-      color: #ffb300;
-      font-size: 2.8rem; }
-    .static-bar .icon-container div .sub {
-      color: black;
-      font-weight: 700;
-      margin-top: .5rem;
-      display: block; }
-      .static-bar .icon-container div .sub:hover {
-        color: #ffb300;
-        transition: color .2s linear; }
+      color: #000;
+      font-size: 2.8rem;
+      transition: all .25s linear; }
+    .static-bar .icon-container div a:hover {
+      color: #ffb300; }
 
 .mobileBar {
   display: none; }

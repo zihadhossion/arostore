@@ -36,17 +36,20 @@ function toggleMenu() {
 menuBtn.addEventListener("click", toggleMenu);
 closeMenubar.addEventListener("click", toggleMenu);
 
-
+//sticky bar
 window.addEventListener("scroll", () => {
   const stickyBar = document.querySelector(".sticky-bar");
 
   if (window.scrollY > 0) {
+    stickyBar.style.display = "block";
     stickyBar.classList.add("scrolled");
   } else {
     stickyBar.classList.remove("scrolled");
+    stickyBar.style.display = "none";
   }
 })
 
+//toggle for sub menu item
 const aeroRights = document.querySelectorAll(".mob-sidebar .fa-chevron-right");
 const backAero = document.querySelector(".mob-sidebar .fa-chevron-left");
 const mainMenus = document.querySelector(".mob-sidebar .navlinks");
@@ -69,6 +72,8 @@ function showSubMenu(step) {
   };
 }
 
+
+//slider sub item
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 6,
   centeredSlides: false,
