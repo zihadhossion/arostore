@@ -1,23 +1,5 @@
-// //hero slide here
-// let slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//   let i;
-//   let slides = document.querySelectorAll(".mySlides");
-//   let dots = document.querySelectorAll(".dot-box .dot");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {
-//     slideIndex = 1;
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   setTimeout(showSlides, 9000);
-// }
-
-const swiper2 = new Swiper(".heroSwiper", {
+//slider for hero section
+let swiper2 = new Swiper(".heroSwiper", {
   pagination: {
     el: ".swiper-pagination",
     autoplay: {
@@ -27,7 +9,7 @@ const swiper2 = new Swiper(".heroSwiper", {
   },
 });
 
-//menu toggle here
+//mobile menu bar toggle 
 const menuBtn = document.getElementById("menu-bar");
 const closeMenubar = document.getElementById("close-bar");
 const mobSidebar = document.querySelector(".mob-sidebar");
@@ -43,10 +25,11 @@ function toggleMenu() {
     document.getElementsByTagName("body")[0].style.overflow = boolValue ? "hidden" : "";
   }
 }
+
 menuBtn.addEventListener("click", toggleMenu);
 closeMenubar.addEventListener("click", toggleMenu);
 
-//sticky bar
+//sticky bar for window scroll
 window.addEventListener("scroll", () => {
   const stickyBar = document.querySelector(".sticky-bar");
   const stickyBar2 = document.querySelector("#sticky-bar");
@@ -69,25 +52,23 @@ const mainMenus = document.querySelector(".mob-sidebar .navlinks");
 
 function showSubMenu(step) {
   const el = document.querySelector(`.submenu${step}`);
-  console.log(el);
 
-  for (const aeroKey of aeroRights) {
-    aeroKey.addEventListener("click", () => {
+  for (const aero of aeroRights) {
+    aero.addEventListener("click", () => {
       el.classList.remove("hidden");
       mainMenus.style.transform = "translate(100%)";
       el.parentElement.style.transform = "translate(10%)";
-
     });
-    backAero.addEventListener("click", () => {
-      el.classList.add("hidden");
-      el.parentElement.style.transform = "translate(100%)";
-      mainMenus.style.transform = "translate(0%)";
-    })
   };
+  backAero.addEventListener("click", () => {
+    el.classList.add("hidden");
+    el.parentElement.style.transform = "translate(100%)";
+    mainMenus.style.transform = "translate(0%)";
+  })
 }
 
 
-//slider sub item
+//slider Categories item
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 6,
   centeredSlides: false,

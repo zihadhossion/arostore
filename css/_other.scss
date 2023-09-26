@@ -67,7 +67,7 @@
 
         &:hover .product-btn {
           visibility: visible;
-          animation: showUp .25s linear;
+          animation: showUp .5s linear;
         }
 
         .card-title {
@@ -162,10 +162,14 @@
         font-size: 1.5rem;
         font-weight: 700;
         background: #fff;
+        transition: all .25s linear;
+
+        &:hover {
+          color: #ffb300;
+        }
       }
     }
   }
-
 }
 
 //animation is here
