@@ -1,21 +1,31 @@
-//hero slide here
-let slideIndex = 0;
-showSlides();
+// //hero slide here
+// let slideIndex = 0;
+// showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.querySelectorAll(".mySlides");
-  let dots = document.querySelectorAll(".dot-box .dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 9000);
-}
+// function showSlides() {
+//   let i;
+//   let slides = document.querySelectorAll(".mySlides");
+//   let dots = document.querySelectorAll(".dot-box .dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {
+//     slideIndex = 1;
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   setTimeout(showSlides, 9000);
+// }
+
+const swiper2 = new Swiper(".heroSwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+  },
+});
 
 //menu toggle here
 const menuBtn = document.getElementById("menu-bar");
@@ -39,13 +49,16 @@ closeMenubar.addEventListener("click", toggleMenu);
 //sticky bar
 window.addEventListener("scroll", () => {
   const stickyBar = document.querySelector(".sticky-bar");
+  const stickyBar2 = document.querySelector("#sticky-bar");
 
   if (window.scrollY > 0) {
-    stickyBar.style.display = "block";
     stickyBar.classList.add("scrolled");
+    stickyBar2.style.display = "block";
+    stickyBar2.classList.add("scrolled");
   } else {
     stickyBar.classList.remove("scrolled");
-    stickyBar.style.display = "none";
+    stickyBar2.style.display = "none";
+    stickyBar2.classList.remove("scrolled");
   }
 })
 
@@ -56,6 +69,7 @@ const mainMenus = document.querySelector(".mob-sidebar .navlinks");
 
 function showSubMenu(step) {
   const el = document.querySelector(`.submenu${step}`);
+  console.log(el);
 
   for (const aeroKey of aeroRights) {
     aeroKey.addEventListener("click", () => {
@@ -83,3 +97,4 @@ let swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false
   },
 });
+
