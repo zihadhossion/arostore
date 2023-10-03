@@ -50,22 +50,37 @@ const aeroRights = document.querySelectorAll(".mob-sidebar .fa-chevron-right");
 const backAero = document.querySelector(".mob-sidebar .fa-chevron-left");
 const mainMenus = document.querySelector(".mob-sidebar .navlinks");
 
-function showSubMenu(step) {
-  const el = document.querySelector(`.submenu${step}`);
+for (const item of aeroRights) {
 
-  for (const aero of aeroRights) {
-    aero.addEventListener("click", () => {
-      el.classList.remove("hidden");
+  function showSubMenu(step) {
+    const ele = document.querySelector(`.submenu${step}`);
+    console.log(ele);
+
+    item.addEventListener("click", () => {
+      ele.classList.remove("hidden");
       mainMenus.style.transform = "translate(100%)";
-      el.parentElement.style.transform = "translate(10%)";
+      ele.parentElement.style.transform = "translate(10%)";
     });
-  };
-  backAero.addEventListener("click", () => {
-    el.classList.add("hidden");
-    el.parentElement.style.transform = "translate(100%)";
-    mainMenus.style.transform = "translate(0%)";
-  })
+
+    backAero.addEventListener("click", () => {
+      ele.classList.add("hidden");
+      ele.parentElement.style.transform = "translate(100%)";
+      mainMenus.style.transform = "translate(0%)";
+    })
+  }
 }
+
+//browse category
+
+const browseMenu = document.querySelector(".browse");
+const browseCate = document.querySelector(".browse-category");
+
+browseMenu.addEventListener("click", () => {
+  browseCate.classList.toggle("tBrow")
+})
+
+
+
 
 
 //slider Categories item

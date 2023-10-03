@@ -11,6 +11,7 @@
         display: flex;
         flex: 1;
         gap: 5rem;
+        position: relative;
 
         .browse {
             width: 260px;
@@ -23,6 +24,37 @@
             display: flex;
             align-items: center;
             gap: 1.75rem;
+            cursor: pointer;
+        }
+
+        .browse-category {
+            width: 260px;
+            background: #fff;
+            position: absolute;
+            border: 2px solid #ffb300;
+            display: none;
+            z-index: 1000;
+            top: 100%;
+
+            div {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        .tBrow {
+            display: grid;
+            animation: upDown .1s linear;
+        }
+
+        @keyframes upDown {
+            0% {
+                height: 0%;
+            }
+
+            100% {
+                height: 100%;
+            }
         }
 
         .nav-links {

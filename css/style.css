@@ -140,8 +140,30 @@ li {
   left: 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 100; }
+  .scrolled .static-bar {
+    position: relative; }
+    .scrolled .static-bar .searchBox {
+      display: flex; }
+      .scrolled .static-bar .searchBox input {
+        width: 250px;
+        font-size: 1.75rem;
+        border: 2px solid #dcdcdc;
+        border-radius: .6rem;
+        outline: none;
+        padding: 0.8rem 1.5rem;
+        position: absolute;
+        left: 83%;
+        transform: translateX(-83%);
+        align-self: center; }
+        .scrolled .static-bar .searchBox input::placeholder {
+          font-size: 1.25rem; }
   .scrolled .desktopBar {
     margin-top: 0rem !important; }
+  @media (max-width: 1400px) {
+    .scrolled .static-bar .searchBox input {
+      position: absolute;
+      top: 100%;
+      left: 83%; } }
 
 #sticky-bar {
   display: none;
@@ -394,7 +416,8 @@ li {
   .bottomBar .left {
     display: flex;
     flex: 1;
-    gap: 5rem; }
+    gap: 5rem;
+    position: relative; }
     .bottomBar .left .browse {
       width: 260px;
       font-size: 1.6rem;
@@ -405,7 +428,27 @@ li {
       padding: 1.5rem 0 1.5rem 2.25rem;
       display: flex;
       align-items: center;
-      gap: 1.75rem; }
+      gap: 1.75rem;
+      cursor: pointer; }
+    .bottomBar .left .browse-category {
+      width: 260px;
+      background: #fff;
+      position: absolute;
+      border: 2px solid #ffb300;
+      display: none;
+      z-index: 1000;
+      top: 100%; }
+      .bottomBar .left .browse-category div {
+        display: flex;
+        gap: 2rem; }
+    .bottomBar .left .tBrow {
+      display: grid;
+      animation: upDown .1s linear; }
+@keyframes upDown {
+  0% {
+    height: 0%; }
+  100% {
+    height: 100%; } }
     .bottomBar .left .nav-links {
       align-self: center; }
       .bottomBar .left .nav-links .navLink {
@@ -996,7 +1039,7 @@ li {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     font-size: 1.5rem;
-    padding: 2rem 12rem;
+    padding: 2rem 3rem;
     margin-bottom: 3rem; }
     .footer section h2 {
       font-size: 2rem;
