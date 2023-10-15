@@ -100,7 +100,6 @@
 }
 
 .brand {
-  // text-align: left;
   margin-top: 3rem;
   padding: 3rem 5rem;
   background: #fff;
@@ -116,6 +115,8 @@
     justify-content: center;
 
     div {
+      cursor: pointer;
+
       &:hover {
         animation: moveLR .35s ease-in-out 2;
       }
@@ -163,6 +164,7 @@
         font-weight: 700;
         background: #fff;
         transition: all .25s linear;
+        cursor: pointer;
 
         &:hover {
           color: #ffb300;

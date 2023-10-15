@@ -69,15 +69,16 @@ li {
       .desktopBar .right .helpBox span {
         color: #7e7e7e;
         font-size: 1.3rem;
-        font-weight: 500; }
+        font-weight: 500;
+        cursor: pointer; }
       .desktopBar .right .helpBox .sub {
         color: black;
         font-size: 1.4rem;
         font-weight: 700;
-        display: block; }
+        display: block;
+        transition: color .25s linear; }
         .desktopBar .right .helpBox .sub:hover {
-          color: #ffb300;
-          transition: color .2s linear; }
+          color: #ffb300; }
     .desktopBar .right .searchBox {
       width: 100%;
       max-width: 400px;
@@ -167,7 +168,8 @@ li {
 
 #sticky-bar {
   display: none;
-  background: #fff; }
+  background: #fff;
+  animation: slideDown .4s linear both; }
   #sticky-bar .static-bar {
     display: flex;
     justify-content: space-between;
@@ -244,7 +246,11 @@ li {
         transition: all .25s linear; }
       #sticky-bar .static-bar .icon-container div a:hover {
         color: #ffb300; }
-
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translateZ(0); } }
 .hidden {
   display: none !important; }
 
@@ -570,7 +576,8 @@ li {
         padding: 1.25rem 3.5rem;
         transition: all .25s linear; }
         .hero .text article .btn:hover {
-          background: #fff; }
+          background: #fff;
+          cursor: pointer; }
 
 @media (max-width: 992px) {
   .bottomBar {
@@ -607,7 +614,8 @@ li {
     justify-content: center;
     align-items: center; }
     .shop-category .cate .swiper-slide img {
-      border-radius: 50%; }
+      border-radius: 50%;
+      cursor: pointer; }
       .shop-category .cate .swiper-slide img:hover {
         animation: moveLR .35s ease-in-out 2; }
     .shop-category .cate .swiper-slide a {
@@ -634,42 +642,46 @@ li {
         transform: scale(1.075); }
       .bestitem .cardContain .card img {
         width: 100%;
-        transition: all .6s ease-in-out; }
-    .bestitem .cardContain article {
-      font-size: 1.5rem;
-      width: 100%;
-      color: #fff;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      bottom: auto;
-      transform: translateY(-50%);
-      display: flex;
-      padding: 0 0 0 5rem; }
-      .bestitem .cardContain article .text span {
-        display: inline-block;
-        color: #000;
-        background: #ffb300;
-        border-radius: .6rem;
-        padding: .75rem;
-        margin-bottom: 2rem; }
-      .bestitem .cardContain article .text h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem; }
-      .bestitem .cardContain article .text p {
-        margin-bottom: 2.5rem; }
-      .bestitem .cardContain article .text a {
-        display: inline-block;
-        font-weight: 700;
-        color: #000;
-        background-color: #fff;
-        border-radius: .6rem;
-        padding: 1.5rem 5rem;
-        transition: all .25s linear; }
-        .bestitem .cardContain article .text a:hover {
-          color: #fff;
-          background-color: #ffb300; }
+        transition: all .6s ease-in-out;
+        cursor: pointer; }
+      .bestitem .cardContain .card article {
+        font-size: 1.5rem;
+        width: 100%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        bottom: auto;
+        transform: translateY(-50%);
+        display: flex;
+        padding: 0 0 0 5rem; }
+        .bestitem .cardContain .card article .text span {
+          display: inline-block;
+          color: #000;
+          background: #ffb300;
+          border-radius: .6rem;
+          padding: .75rem;
+          margin-bottom: 2rem; }
+        .bestitem .cardContain .card article .text h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 1rem; }
+        .bestitem .cardContain .card article .text p {
+          margin-bottom: 2.5rem; }
+        .bestitem .cardContain .card article .text a {
+          display: inline-block;
+          font-weight: 700;
+          color: #000;
+          background-color: #fff;
+          border-radius: .6rem;
+          padding: 1.5rem 5rem;
+          transition: all .25s linear; }
+          .bestitem .cardContain .card article .text a:hover {
+            color: #fff;
+            background-color: #ffb300; }
+    .bestitem .cardContain .card-2 article .text h1,
+    .bestitem .cardContain .card-2 article .text p {
+      color: #000; }
 
 .top-sell {
   background-color: #F7F6F1;
@@ -691,7 +703,8 @@ li {
       font-size: 2rem;
       background-color: #fff;
       text-align: center;
-      padding: 2rem; }
+      padding: 2rem;
+      transition: all .3s linear; }
       .top-sell .item-container .item .dis {
         width: 20%;
         display: block;
@@ -699,7 +712,8 @@ li {
         background: #2A27E9;
         padding: .5rem; }
       .top-sell .item-container .item img {
-        width: 25rem; }
+        width: 25rem;
+        cursor: pointer; }
       .top-sell .item-container .item .product-btn {
         visibility: hidden;
         margin-bottom: 1rem; }
@@ -713,13 +727,15 @@ li {
             height: 35px;
             border-radius: .5rem;
             padding: .5rem;
-            box-shadow: 1px 1px 5px 2px #F7F6F5; }
+            box-shadow: 1px 1px 5px 2px #F7F6F5;
+            transition: all .3s linear; }
             .top-sell .item-container .item .product-btn ul li:hover {
               color: #fff;
-              background: #ffb300; }
+              background: #ffb300;
+              cursor: pointer; }
       .top-sell .item-container .item:hover .product-btn {
         visibility: visible;
-        animation: showUp .25s linear; }
+        animation: showUp .5s linear; }
       .top-sell .item-container .item .title {
         font-size: 1.6rem;
         font-weight: 700;
@@ -965,8 +981,10 @@ li {
   .brand .brandCon {
     display: flex;
     justify-content: center; }
-    .brand .brandCon div:hover {
-      animation: moveLR .35s ease-in-out 2; }
+    .brand .brandCon div {
+      cursor: pointer; }
+      .brand .brandCon div:hover {
+        animation: moveLR .35s ease-in-out 2; }
 
 .getNot {
   display: flex;
@@ -998,7 +1016,8 @@ li {
         font-size: 1.5rem;
         font-weight: 700;
         background: #fff;
-        transition: all .25s linear; }
+        transition: all .25s linear;
+        cursor: pointer; }
         .getNot .getContain form button:hover {
           color: #ffb300; }
 
@@ -1059,7 +1078,8 @@ li {
         color: #000;
         font-size: 3.2rem;
         font-weight: 700;
-        transition: all .25s linear; }
+        transition: all .25s linear;
+        cursor: pointer; }
         .footer section .get-touch .mobNum:hover {
           color: #ffb300; }
       .footer section .get-touch .social {
@@ -1073,6 +1093,8 @@ li {
             color: #ffb300; }
     .footer section .links li {
       margin-bottom: 1.5rem; }
+      .footer section .links li a {
+        transition: all .2s linear; }
   .footer article {
     background: #f7f7f7;
     display: flex;

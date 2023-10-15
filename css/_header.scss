@@ -66,6 +66,7 @@
         color: #7e7e7e;
         font-size: 1.3rem;
         font-weight: 500;
+        cursor: pointer;
       }
 
       .sub {
@@ -73,10 +74,10 @@
         font-size: 1.4rem;
         font-weight: 700;
         display: block;
+        transition: color .25s linear;
 
         &:hover {
           color: #ffb300;
-          transition: color .2s linear;
         }
       }
     }
@@ -217,6 +218,7 @@
 #sticky-bar {
   display: none;
   background: #fff;
+  animation: slideDown .4s linear both;
 
   .static-bar {
     display: flex;
@@ -331,6 +333,16 @@
           color: #ffb300;
         }
       }
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+      transform: translateZ(0);
     }
   }
 }
