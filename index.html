@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -290,8 +296,17 @@
                     </div>
                     <div class="icon-container">
                         <div class="searchBox">
-                            <input type="search" id="mini-search" placeholder="Search product...">
-                            <a><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a id="myBtn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="row">
+                                <p>What are you looking for?</p>
+                                <a class="close">&times;</a>
+                            </div>
+                            <div class="modal-content">
+                                <input type="text" id="search" placeholder="Search...">
+                                <a><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
                         </div>
                         <div class="accountBox">
                             <a href="#"><i class="fa-regular fa-user"></i>
@@ -326,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mob-sidebar hidden">
+                <div class="mob-sidebar">
                     <div class="close-menu">
                         <i id="close-bar" class="fa-solid fa-xmark"></i>
                     </div>
@@ -563,7 +578,9 @@
                         </div>
                     </div>
                     <div class="content">
-                        <a href="#"><i class="fa-regular fa-user"></i><span>Login or Register</span></a>
+                        <div class="logBtn">
+                            <a href="#"><i class="fa-regular fa-user"></i><span>Login or Register</span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="header-fixed">
@@ -837,7 +854,7 @@
         </section>
 
         <section class="hero">
-            <div class="swiper2 heroSwiper">
+            <div class="swiper heroSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./image/banner-1.jpg" style="width: 100%;">
@@ -1425,7 +1442,12 @@
         </footer>
     </div>
 
+    <button>Search</button>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="main.js"></script>
 </body>
 
