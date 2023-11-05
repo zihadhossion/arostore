@@ -21,7 +21,6 @@ closeModal.addEventListener("click", () => {
   modal.classList.remove("show-modal");
 })
 
-
 //mobile menu bar toggle 
 const menuBtn = document.getElementById("menu-bar");
 const closeMenubar = document.getElementById("close-bar");
@@ -62,19 +61,19 @@ window.addEventListener("scroll", () => {
 
 //toggle for sub menu item
 const backAero = document.querySelector(".mob-sidebar .fa-chevron-left");
-const mainMenus = document.querySelector(".mob-sidebar .navlinks");
+const mainMenu = document.querySelector(".mob-sidebar .navlinks");
 
 function showSubMenu(step) {
   const ele = document.querySelector(`.submenu${step}`);
-  console.log(ele);
-  ele.classList.toggle("hidden");
-  mainMenus.style.transform = "translate(100%)";
+
+  ele.classList.add("subShow");
+  mainMenu.style.transform = "translate(100%)";
   ele.parentElement.style.transform = "translate(10%)";
 
   backAero.addEventListener("click", () => {
-    ele.classList.add("hidden");
+    ele.classList.remove("subShow");
     ele.parentElement.style.transform = "translate(100%)";
-    mainMenus.style.transform = "translate(0%)";
+    mainMenu.style.transform = "translate(0%)";
   })
 }
 
