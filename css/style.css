@@ -12,7 +12,8 @@ body {
 
 a {
   color: #7e7e7e;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all .2s linear; }
   a:hover {
     color: #ffb300; }
 
@@ -29,6 +30,68 @@ input,
 button {
   border: none;
   outline: none; }
+
+.nav-links {
+  align-self: center; }
+  .nav-links .navLink {
+    display: flex;
+    position: relative;
+    gap: 3rem; }
+    .nav-links .navLink .dropdown {
+      font-size: 1.5rem; }
+      .nav-links .navLink .dropdown .title {
+        font-weight: 700;
+        color: #000;
+        display: flex;
+        transition: all .1s linear; }
+        .nav-links .navLink .dropdown .title:hover {
+          color: #ffb300; }
+        .nav-links .navLink .dropdown .title:hover .fa-chevron-down {
+          transform: rotate(180deg); }
+        .nav-links .navLink .dropdown .title .fa-chevron-down {
+          font-size: .9rem;
+          margin-left: .75rem;
+          align-self: center;
+          transition: all .2s linear; }
+      .nav-links .navLink .dropdown:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1); }
+      .nav-links .navLink .dropdown .sub-menu {
+        font-size: 1.4rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        background: #ffffff;
+        min-width: 225px;
+        max-width: 1000px;
+        position: absolute;
+        z-index: 99999;
+        padding: 2.5rem 1.5rem;
+        transition: all .2s ease-in-out; }
+        .nav-links .navLink .dropdown .sub-menu ul li:not(:last-child) {
+          margin-bottom: 1.5rem; }
+        .nav-links .navLink .dropdown .sub-menu .shop-sub {
+          height: 65vh;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          gap: 3rem;
+          padding: 2.5rem 2rem;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #ffffff; }
+          .nav-links .navLink .dropdown .sub-menu .shop-sub p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #000;
+            width: 150px;
+            display: inline-block;
+            margin-bottom: 1.5rem; }
+          .nav-links .navLink .dropdown .sub-menu .shop-sub div:first-child {
+            grid-row: 1/-1; }
 
 .header {
   min-height: 100%;
@@ -105,6 +168,7 @@ button {
             color: #ffb300;
             font-size: 1.5rem; }
         .desktopBar .right .searchBox .search-form .input-search {
+          width: 100%;
           margin-left: .5rem; }
           .desktopBar .right .searchBox .search-form .input-search input {
             font-size: 1.75rem;
@@ -140,12 +204,12 @@ button {
   top: 0;
   left: 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 100; }
-  .scrolled .static-bar {
+  z-index: 99; }
+  .scrolled .desk-bar {
     position: relative; }
-    .scrolled .static-bar .searchBox {
+    .scrolled .desk-bar .searchBox {
       display: flex; }
-      .scrolled .static-bar .searchBox input {
+      .scrolled .desk-bar .searchBox input {
         width: 250px;
         font-size: 1.75rem;
         border: 2px solid #dcdcdc;
@@ -156,7 +220,7 @@ button {
         left: 83%;
         transform: translateX(-83%);
         align-self: center; }
-        .scrolled .static-bar .searchBox input::placeholder {
+        .scrolled .desk-bar .searchBox input::placeholder {
           font-size: 1.25rem; }
   .scrolled .desktopBar {
     margin-top: 0rem !important; }
@@ -170,89 +234,34 @@ button {
   display: none;
   background: #fff;
   animation: slideDown .4s linear both; }
-  #sticky-bar .static-bar {
+  #sticky-bar .desk-bar {
     display: flex;
     justify-content: space-between;
-    padding: 2rem; }
-    #sticky-bar .static-bar .logoBox {
+    padding: 2rem 3rem; }
+    #sticky-bar .desk-bar .logoBox {
       align-self: center;
       max-width: 20rem; }
-      #sticky-bar .static-bar .logoBox img {
+      #sticky-bar .desk-bar .logoBox img {
         width: 100%; }
-    #sticky-bar .static-bar .nav-links {
-      align-self: center; }
-      #sticky-bar .static-bar .nav-links .navLink {
-        display: flex;
-        position: relative;
-        gap: 3rem; }
-        #sticky-bar .static-bar .nav-links .navLink .dropdown {
-          font-size: 1.5rem; }
-          #sticky-bar .static-bar .nav-links .navLink .dropdown .title {
-            font-weight: 700;
-            color: #000;
-            display: flex;
-            transition: all .1s linear; }
-            #sticky-bar .static-bar .nav-links .navLink .dropdown .title:hover {
-              color: #ffb300; }
-            #sticky-bar .static-bar .nav-links .navLink .dropdown .title:hover .fa-chevron-down {
-              transform: rotate(180deg); }
-            #sticky-bar .static-bar .nav-links .navLink .dropdown .title .fa-chevron-down {
-              font-size: .9rem;
-              margin-left: .75rem;
-              align-self: center; }
-          #sticky-bar .static-bar .nav-links .navLink .dropdown:hover .sub-menu {
-            display: block;
-            transition: all 1s ease-in-out; }
-          #sticky-bar .static-bar .nav-links .navLink .dropdown .sub-menu {
-            font-size: 1.4rem;
-            display: none;
-            background: #ffffff;
-            min-width: 225px;
-            max-width: 1000px;
-            position: absolute;
-            z-index: 1;
-            padding: 2.5rem 1.5rem; }
-            #sticky-bar .static-bar .nav-links .navLink .dropdown .sub-menu ul li {
-              margin-bottom: 1.5rem; }
-            #sticky-bar .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub {
-              height: 65vh;
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              grid-template-rows: repeat(4, 1fr);
-              gap: 3rem;
-              padding: 2.5rem 2rem;
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              background: #ffffff; }
-              #sticky-bar .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub p {
-                font-size: 1.6rem;
-                font-weight: 500;
-                color: #000;
-                width: 150px;
-                display: inline-block;
-                margin-bottom: 1.5rem; }
-              #sticky-bar .static-bar .nav-links .navLink .dropdown .sub-menu .shop-sub div:first-child {
-                grid-row: 1/-1; }
-    #sticky-bar .static-bar .icon-container {
+    #sticky-bar .desk-bar .icon-container {
       display: flex;
       align-items: center;
       gap: 1.5rem; }
-      #sticky-bar .static-bar .icon-container div a {
+      #sticky-bar .desk-bar .icon-container div a {
         display: flex;
         align-items: center;
         color: #000;
         font-size: 2.8rem;
         transition: all .25s linear;
         cursor: pointer; }
-      #sticky-bar .static-bar .icon-container div a:hover {
+      #sticky-bar .desk-bar .icon-container div a:hover {
         color: #ffb300; }
-      #sticky-bar .static-bar .icon-container .search-box {
+      #sticky-bar .desk-bar .icon-container .search-box {
         position: relative; }
-      #sticky-bar .static-bar .icon-container .modal {
+      #sticky-bar .desk-bar .icon-container .modal {
         font-size: 2.5rem;
         position: fixed;
-        z-index: 999999;
+        z-index: 1;
         left: 0;
         top: 0;
         width: 100%;
@@ -262,15 +271,15 @@ button {
         visibility: hidden;
         opacity: 0;
         padding: 2rem; }
-        #sticky-bar .static-bar .icon-container .modal .row {
+        #sticky-bar .desk-bar .icon-container .modal .row {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 0 5rem; }
-          #sticky-bar .static-bar .icon-container .modal .row .close {
+          #sticky-bar .desk-bar .icon-container .modal .row .close {
             font-size: 5rem;
             cursor: pointer; }
-        #sticky-bar .static-bar .icon-container .modal .modal-content {
+        #sticky-bar .desk-bar .icon-container .modal .modal-content {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -280,7 +289,7 @@ button {
           padding: 2rem;
           width: 100%;
           text-align: center; }
-          #sticky-bar .static-bar .icon-container .modal .modal-content #search {
+          #sticky-bar .desk-bar .icon-container .modal .modal-content #search {
             font-size: 2.5rem;
             width: 60%;
             border: none;
@@ -288,11 +297,11 @@ button {
             border-bottom: 2px solid #000;
             padding: 1rem;
             margin-top: 2rem; }
-          #sticky-bar .static-bar .icon-container .modal .modal-content a {
+          #sticky-bar .desk-bar .icon-container .modal .modal-content a {
             cursor: pointer; }
-          #sticky-bar .static-bar .icon-container .modal .modal-content input::placeholder {
+          #sticky-bar .desk-bar .icon-container .modal .modal-content input::placeholder {
             font-size: 2rem; }
-      #sticky-bar .static-bar .icon-container .show-modal {
+      #sticky-bar .desk-bar .icon-container .show-modal {
         visibility: visible;
         opacity: 1;
         transition: all .5s ease-in-out; }
@@ -314,17 +323,19 @@ button {
   .mobileBar a {
     font-size: 1.25rem;
     color: #000; }
-  .mobileBar .container {
+  .mobileBar .nav {
+    width: 100%;
     font-size: 1.4rem;
     background: #fff;
     padding: 1rem 2rem;
-    position: relative; }
-    .mobileBar .container i {
+    position: fixed;
+    z-index: 99; }
+    .mobileBar .nav i {
       font-size: 2rem; }
-    .mobileBar .container .logoBox img {
+    .mobileBar .nav .logoBox img {
       max-width: 12rem;
       width: 100%; }
-    .mobileBar .container .icon-bar {
+    .mobileBar .nav .icon-bar {
       display: flex;
       gap: 1.75rem; }
   .mobileBar .mob-sidebar {
@@ -417,7 +428,7 @@ button {
     .mobileBar .mob-sidebar .content {
       width: 220px;
       background: #fff;
-      z-index: 1000;
+      z-index: 1;
       padding: 1rem;
       position: fixed;
       bottom: 0; }
@@ -448,7 +459,7 @@ button {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 99;
     box-shadow: 0 1px 12px 2px rgba(143, 143, 143, 0.3); }
     .mobileBar .header-fixed > div {
       flex: 1;
@@ -472,7 +483,7 @@ button {
 
   .mobileBar {
     display: block; }
-    .mobileBar .container {
+    .mobileBar .nav {
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -480,9 +491,10 @@ button {
       display: flex;
       align-items: center; }
 
-  #sticky-bar .static-bar {
+  #sticky-bar {
     display: none !important; }
-  #sticky-bar .mobileBar {
+
+  .mobileBar {
     display: flex !important; } }
 .bottomBar {
   width: 100%;
@@ -498,7 +510,7 @@ button {
     gap: 5rem;
     position: relative; }
     .bottomBar .left .browse {
-      width: 260px;
+      width: 300px;
       font-size: 1.6rem;
       font-weight: 700;
       background: #ffb300;
@@ -510,82 +522,46 @@ button {
       gap: 1.75rem;
       cursor: pointer; }
     .bottomBar .left .browse-category {
-      width: 260px;
+      width: 300px;
       background: #fff;
       position: absolute;
       border: 2px solid #ffb300;
-      z-index: 1000;
+      z-index: 999999;
       top: 100%;
       visibility: hidden;
       transform: scaleY(0);
       transform-origin: 0 0;
       opacity: 0;
-      transition: all .25s linear; }
-      .bottomBar .left .browse-category div {
-        display: flex;
-        gap: 2rem; }
+      transition: all .2s linear;
+      padding: 2rem 1.5rem; }
+      .bottomBar .left .browse-category .menu-item {
+        display: block;
+        margin-bottom: 3rem; }
+        .bottomBar .left .browse-category .menu-item .cate-list {
+          padding: 1.25rem 0;
+          font-size: 1.5rem; }
+          .bottomBar .left .browse-category .menu-item .cate-list .menu-item-text {
+            font-size: 1.5rem;
+            width: 100%;
+            display: block;
+            position: relative; }
+            .bottomBar .left .browse-category .menu-item .cate-list .menu-item-text i {
+              font-size: 21px;
+              width: 21px;
+              position: relative;
+              text-align: center;
+              margin-right: 1.6rem; }
+            .bottomBar .left .browse-category .menu-item .cate-list .menu-item-text::after {
+              font-size: 1.25rem;
+              position: absolute;
+              right: 0;
+              font: var(--fa-font-solid);
+              content: "\f054";
+              top: 5px; }
     .bottomBar .left .tBrow {
       visibility: visible;
       transform: scaleY(1);
       opacity: 1; }
-    .bottomBar .left .nav-links {
-      align-self: center; }
-      .bottomBar .left .nav-links .navLink {
-        display: flex;
-        gap: 3rem; }
-        .bottomBar .left .nav-links .navLink .dropdown {
-          font-size: 1.5rem; }
-          .bottomBar .left .nav-links .navLink .dropdown .title {
-            font-weight: 700;
-            color: #000;
-            display: flex;
-            transition: all .1s linear; }
-            .bottomBar .left .nav-links .navLink .dropdown .title:hover {
-              color: #ffb300; }
-            .bottomBar .left .nav-links .navLink .dropdown .title:hover .fa-chevron-down {
-              transform: rotate(180deg); }
-            .bottomBar .left .nav-links .navLink .dropdown .title .fa-chevron-down {
-              font-size: .9rem;
-              margin-left: .75rem;
-              align-self: center;
-              transition: all .2s linear; }
-          .bottomBar .left .nav-links .navLink .dropdown:hover .sub-menu {
-            visibility: visible;
-            opacity: 1;
-            transform: scaleY(1); }
-          .bottomBar .left .nav-links .navLink .dropdown .sub-menu {
-            font-size: 1.4rem;
-            min-width: 225px;
-            max-width: 1000px;
-            background: #fff;
-            position: absolute;
-            top: 90%;
-            z-index: 110;
-            padding: 2.5rem 1.5rem;
-            height: auto;
-            visibility: hidden;
-            opacity: 0;
-            transform: scaleY(0);
-            transform-origin: 0 0;
-            transition: all .2s ease-in-out; }
-            .bottomBar .left .nav-links .navLink .dropdown .sub-menu ul li {
-              margin-bottom: 1.5rem; }
-            .bottomBar .left .nav-links .navLink .dropdown .sub-menu .shop-sub {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              grid-template-rows: repeat(4, 1fr);
-              gap: 3rem;
-              padding: 2.5rem 2rem;
-              max-height: 400px; }
-              .bottomBar .left .nav-links .navLink .dropdown .sub-menu .shop-sub p {
-                font-size: 1.6rem;
-                font-weight: 500;
-                color: #000;
-                width: 150px;
-                display: inline-block;
-                margin-bottom: 1.5rem; }
-              .bottomBar .left .nav-links .navLink .dropdown .sub-menu .shop-sub div:first-child {
-                grid-row: 1/-1; }
   .bottomBar .right {
     display: flex;
     align-items: center; }
@@ -714,11 +690,11 @@ button {
       width: 50%;
       overflow: hidden; }
       .bestitem .cardContain .card:hover img {
-        transform: scale(1.075); }
+        transform: scale(1.075);
+        overflow: hidden; }
       .bestitem .cardContain .card img {
         width: 100%;
-        transition: all .6s ease-in-out;
-        cursor: pointer; }
+        transition: all .6s ease-in-out; }
       .bestitem .cardContain .card article {
         font-size: 1.5rem;
         width: 100%;
@@ -736,13 +712,13 @@ button {
           background: #ffb300;
           border-radius: .6rem;
           padding: .75rem;
-          margin-bottom: 2rem; }
+          margin-bottom: 3rem; }
         .bestitem .cardContain .card article .text h1 {
           font-size: 3rem;
           font-weight: 700;
           margin-bottom: 1rem; }
         .bestitem .cardContain .card article .text p {
-          margin-bottom: 2.5rem; }
+          margin-bottom: 4rem; }
         .bestitem .cardContain .card article .text a {
           display: inline-block;
           font-weight: 700;
@@ -750,6 +726,7 @@ button {
           background-color: #fff;
           border-radius: .6rem;
           padding: 1.5rem 5rem;
+          line-height: 1;
           transition: all .25s linear; }
           .bestitem .cardContain .card article .text a:hover {
             color: #fff;
@@ -781,9 +758,11 @@ button {
       padding: 2rem;
       transition: all .3s linear; }
       .top-sell .item-container .item .dis {
-        width: 20%;
+        width: 45px;
+        font-size: 1.25rem;
         display: block;
-        text-align: left;
+        text-align: center;
+        color: #fff;
         background: #2A27E9;
         padding: .5rem; }
       .top-sell .item-container .item img {
@@ -927,7 +906,7 @@ button {
         margin-bottom: 2rem; }
       .new-item .item article a {
         padding: 1rem 3rem; } }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .shop-category .cate h1 {
     font-size: 2.5rem; }
 
@@ -935,12 +914,15 @@ button {
     padding: .5rem; }
     .bestitem .cardContain {
       gap: 1rem; }
-      .bestitem .cardContain article {
+      .bestitem .cardContain .card article {
         font-size: 1.25rem;
         padding: 0 0 0 2.5rem; }
-        .bestitem .cardContain article .text h1 {
+        .bestitem .cardContain .card article .text span,
+        .bestitem .cardContain .card article .text p {
+          margin-bottom: 2rem; }
+        .bestitem .cardContain .card article .text h1 {
           font-size: 2.5rem; }
-        .bestitem .cardContain article .text a {
+        .bestitem .cardContain .card article .text a {
           padding: 1rem 2.25rem; }
 
   .top-sell {
@@ -962,7 +944,48 @@ button {
         margin-bottom: 1.5rem; }
       .new-item .item article a {
         padding: .75rem 2rem; } }
+@media (max-width: 400px) {
+  .bestitem {
+    padding: .5rem; }
+    .bestitem .cardContain {
+      gap: 1rem; }
+      .bestitem .cardContain .card article {
+        font-size: 1.25rem;
+        padding: 0 0 0 2.5rem; }
+        .bestitem .cardContain .card article .text h1 {
+          font-size: 2rem; }
+        .bestitem .cardContain .card article .text a {
+          padding: 1rem 2.25rem; }
+
+  .new-item .item article {
+    font-size: .75rem; }
+    .new-item .item article span {
+      padding: .2rem;
+      border-radius: .3rem;
+      margin-bottom: .1rem; }
+    .new-item .item article h1 {
+      font-size: 1.5rem;
+      margin-bottom: .2rem; }
+    .new-item .item article p {
+      margin-bottom: .5rem; }
+    .new-item .item article a {
+      padding: .5rem 1.5rem; } }
 @media (max-width: 300px) {
+  .bestitem .cardContain .card article .text span {
+    margin-bottom: .5rem; }
+  .bestitem .cardContain .card article .text h1 {
+    font-size: 1.75rem;
+    margin-bottom: .5rem; }
+  .bestitem .cardContain .card article .text p {
+    margin-bottom: 1.25rem; }
+  .bestitem .cardContain .card article .text a {
+    padding: .8rem 1.5rem; }
+
+  .top-sell .title {
+    font-size: 2rem; }
+  .top-sell .item-container .item {
+    padding: .5rem; }
+
   .new-item .item article {
     font-size: .75rem; }
     .new-item .item article span {

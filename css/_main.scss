@@ -67,12 +67,12 @@
 
             &:hover img {
                 transform: scale(1.075);
+                overflow: hidden;
             }
 
             img {
                 width: 100%;
                 transition: all .6s ease-in-out;
-                cursor: pointer;
             }
 
             article {
@@ -94,7 +94,7 @@
                         background: #ffb300;
                         border-radius: .6rem;
                         padding: .75rem;
-                        margin-bottom: 2rem;
+                        margin-bottom: 3rem;
                     }
 
                     h1 {
@@ -104,7 +104,7 @@
                     }
 
                     p {
-                        margin-bottom: 2.5rem;
+                        margin-bottom: 4rem;
                     }
 
                     a {
@@ -114,6 +114,7 @@
                         background-color: #fff;
                         border-radius: .6rem;
                         padding: 1.5rem 5rem;
+                        line-height: 1;
                         transition: all .25s linear;
 
                         &:hover {
@@ -167,9 +168,11 @@
             transition: all .3s linear;
 
             .dis {
-                width: 20%;
+                width: 45px;
+                font-size: 1.25rem;
                 display: block;
-                text-align: left;
+                text-align: center;
+                color: #fff;
                 background: #2A27E9;
                 padding: .5rem;
             }
@@ -404,7 +407,7 @@
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
     .shop-category {
         .cate {
             h1 {
@@ -419,23 +422,29 @@
         .cardContain {
             gap: 1rem;
 
-            article {
-                font-size: 1.25rem;
-                padding: 0 0 0 2.5rem;
+            .card {
+                article {
+                    font-size: 1.25rem;
+                    padding: 0 0 0 2.5rem;
 
-                .text {
-                    h1 {
-                        font-size: 2.5rem;
-                    }
+                    .text {
 
-                    a {
-                        padding: 1rem 2.25rem;
+                        span,
+                        p {
+                            margin-bottom: 2rem;
+                        }
+
+                        h1 {
+                            font-size: 2.5rem;
+                        }
+
+                        a {
+                            padding: 1rem 2.25rem;
+                        }
                     }
                 }
             }
         }
-
-
     }
 
     .top-sell {
@@ -475,7 +484,100 @@
     }
 }
 
+@media (max-width:400px) {
+    .bestitem {
+        padding: .5rem;
+
+        .cardContain {
+            gap: 1rem;
+
+            .card {
+                article {
+                    font-size: 1.25rem;
+                    padding: 0 0 0 2.5rem;
+
+                    .text {
+                        h1 {
+                            font-size: 2rem;
+                        }
+
+                        a {
+                            padding: 1rem 2.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .new-item {
+        .item {
+            article {
+                font-size: .75rem;
+
+                span {
+                    padding: .2rem;
+                    border-radius: .3rem;
+                    margin-bottom: .1rem;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                    margin-bottom: .2rem;
+                }
+
+                p {
+                    margin-bottom: .5rem;
+                }
+
+                a {
+                    padding: .5rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:300px) {
+    .bestitem {
+        .cardContain {
+            .card {
+                article {
+                    .text {
+                        span {
+                            margin-bottom: .5rem;
+                        }
+
+                        h1 {
+                            font-size: 1.75rem;
+                            margin-bottom: .5rem;
+                        }
+
+                        p {
+                            margin-bottom: 1.25rem;
+                        }
+
+                        a {
+                            padding: .8rem 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .top-sell {
+        .title {
+            font-size: 2rem;
+        }
+
+        .item-container {
+            .item {
+                padding: .5rem;
+            }
+        }
+    }
+
     .new-item {
         .item {
             article {

@@ -45,15 +45,12 @@ closeMenubar.addEventListener("click", () => {
 
 //sticky bar for window scroll
 window.addEventListener("scroll", () => {
-  const stickyBar = document.querySelector(".sticky-bar");
   const stickyBar2 = document.querySelector("#sticky-bar");
 
-  if (window.scrollY > 0) {
-    stickyBar.classList.add("scrolled");
+  if (window.scrollY > 100) {
     stickyBar2.style.display = "block";
     stickyBar2.classList.add("scrolled");
   } else {
-    stickyBar.classList.remove("scrolled");
     stickyBar2.style.display = "none";
     stickyBar2.classList.remove("scrolled");
   }

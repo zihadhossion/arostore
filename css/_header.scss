@@ -107,6 +107,7 @@
         }
 
         .input-search {
+          width: 100%;
           margin-left: .5rem;
 
           input {
@@ -164,9 +165,9 @@
   top: 0;
   left: 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  z-index: 99;
 
-  .static-bar {
+  .desk-bar {
     position: relative;
 
     .searchBox {
@@ -213,10 +214,10 @@
   background: #fff;
   animation: slideDown .4s linear both;
 
-  .static-bar {
+  .desk-bar {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 2rem 3rem;
 
     .logoBox {
       align-self: center;
@@ -224,87 +225,6 @@
 
       img {
         width: 100%;
-      }
-    }
-
-    .nav-links {
-      align-self: center;
-
-      .navLink {
-        display: flex;
-        position: relative;
-        gap: 3rem;
-
-        .dropdown {
-          font-size: 1.5rem;
-
-          .title {
-            font-weight: 700;
-            color: #000;
-            display: flex;
-            transition: all .1s linear;
-
-            &:hover {
-              color: #ffb300;
-            }
-
-            &:hover .fa-chevron-down {
-              transform: rotate(180deg);
-            }
-
-            .fa-chevron-down {
-              font-size: .9rem;
-              margin-left: .75rem;
-              align-self: center;
-            }
-          }
-
-          &:hover .sub-menu {
-            display: block;
-            transition: all 1s ease-in-out;
-          }
-
-          .sub-menu {
-            font-size: 1.4rem;
-            display: none;
-            background: #ffffff;
-            min-width: 225px;
-            max-width: 1000px;
-            position: absolute;
-            z-index: 1;
-            padding: 2.5rem 1.5rem;
-
-            ul li {
-              margin-bottom: 1.5rem;
-            }
-
-            .shop-sub {
-              height: 65vh;
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              grid-template-rows: repeat(4, 1fr);
-              gap: 3rem;
-              padding: 2.5rem 2rem;
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              background: #ffffff;
-
-              p {
-                font-size: 1.6rem;
-                font-weight: 500;
-                color: #000;
-                width: 150px;
-                display: inline-block;
-                margin-bottom: 1.5rem;
-              }
-
-              div:first-child {
-                grid-row: 1/-1;
-              }
-            }
-          }
-        }
       }
     }
 
@@ -335,7 +255,7 @@
       .modal {
         font-size: 2.5rem;
         position: fixed;
-        z-index: 999999;
+        z-index: 1;
         left: 0;
         top: 0;
         width: 100%;
@@ -430,11 +350,13 @@
     color: #000;
   }
 
-  .container {
+  .nav {
+    width: 100%;
     font-size: 1.4rem;
     background: #fff;
     padding: 1rem 2rem;
-    position: relative;
+    position: fixed;
+    z-index: 99;
 
     i {
       font-size: 2rem;
@@ -582,7 +504,7 @@
     .content {
       width: 220px;
       background: #fff;
-      z-index: 1000;
+      z-index: 1;
       padding: 1rem;
       position: fixed;
       bottom: 0;
@@ -624,7 +546,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 99;
     box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
 
     &>div {
@@ -668,7 +590,7 @@
   .mobileBar {
     display: block;
 
-    .container {
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -681,12 +603,10 @@
   }
 
   #sticky-bar {
-    .static-bar {
-      display: none !important;
-    }
+    display: none !important;
+  }
 
-    .mobileBar {
-      display: flex !important;
-    }
+  .mobileBar {
+    display: flex !important;
   }
 }

@@ -16,6 +16,7 @@ body {
 a {
   color: #7e7e7e;
   text-decoration: none;
+  transition: all .2s linear;
 
   &:hover {
     color: #ffb300;
@@ -38,4 +39,91 @@ input,
 button {
   border: none;
   outline: none;
+}
+
+.nav-links {
+  align-self: center;
+
+  .navLink {
+    display: flex;
+    position: relative;
+    gap: 3rem;
+
+    .dropdown {
+      font-size: 1.5rem;
+
+      .title {
+        font-weight: 700;
+        color: #000;
+        display: flex;
+        transition: all .1s linear;
+
+        &:hover {
+          color: #ffb300;
+        }
+
+        &:hover .fa-chevron-down {
+          transform: rotate(180deg);
+        }
+
+        .fa-chevron-down {
+          font-size: .9rem;
+          margin-left: .75rem;
+          align-self: center;
+          transition: all .2s linear;
+        }
+      }
+
+      &:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+      .sub-menu {
+        font-size: 1.4rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        background: #ffffff;
+        min-width: 225px;
+        max-width: 1000px;
+        position: absolute;
+        z-index: 99999;
+        padding: 2.5rem 1.5rem;
+        transition: all .2s ease-in-out;
+
+        ul li:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+
+        .shop-sub {
+          height: 65vh;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          gap: 3rem;
+          padding: 2.5rem 2rem;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #ffffff;
+
+          p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #000;
+            width: 150px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+          }
+
+          div:first-child {
+            grid-row: 1/-1;
+          }
+        }
+      }
+    }
+  }
 }
