@@ -150,6 +150,7 @@
         font-size: 3rem;
         font-weight: 700;
         text-align: center;
+        margin: 2rem 0;
     }
 
     .item-container {
@@ -511,27 +512,24 @@
     }
 
     .new-item {
+        padding: .5rem;
+
         .item {
             article {
-                font-size: .75rem;
+                font-size: 1rem;
 
-                span {
-                    padding: .2rem;
-                    border-radius: .3rem;
-                    margin-bottom: .1rem;
-                }
-
-                h1 {
-                    font-size: 1.5rem;
-                    margin-bottom: .2rem;
-                }
-
+                span,
                 p {
                     margin-bottom: .5rem;
                 }
 
+                h1 {
+                    font-size: 1.25rem;
+                    margin-bottom: .25rem;
+                }
+
                 a {
-                    padding: .5rem 1.5rem;
+                    padding: .5rem 1.25rem;
                 }
             }
         }
@@ -578,30 +576,30 @@
         }
     }
 
-    .new-item {
-        .item {
-            article {
-                font-size: .75rem;
+    // .new-item {
+    //     .item {
+    //         article {
+    //             font-size: .75rem;
 
-                span {
-                    padding: .2rem;
-                    border-radius: .3rem;
-                    margin-bottom: .1rem;
-                }
+    //             span {
+    //                 padding: .2rem;
+    //                 border-radius: .3rem;
+    //                 margin-bottom: .1rem;
+    //             }
 
-                h1 {
-                    font-size: 1.5rem;
-                    margin-bottom: .2rem;
-                }
+    //             h1 {
+    //                 font-size: 1.5rem;
+    //                 margin-bottom: .2rem;
+    //             }
 
-                p {
-                    margin-bottom: .5rem;
-                }
+    //             p {
+    //                 margin-bottom: .5rem;
+    //             }
 
-                a {
-                    padding: .5rem 1.5rem;
-                }
-            }
-        }
-    }
+    //             a {
+    //                 padding: .5rem 1.5rem;
+    //             }
+    //         }
+    //     }
+    // }
 }

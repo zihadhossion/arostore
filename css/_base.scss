@@ -86,7 +86,6 @@ button {
         opacity: 0;
         transform: scaleY(0);
         transform-origin: 0 0;
-        background: #ffffff;
         min-width: 225px;
         max-width: 1000px;
         position: absolute;
@@ -98,6 +97,12 @@ button {
           margin-bottom: 1.5rem;
         }
 
+        &:first-child,
+        &:last-child {
+          top: 180%;
+          background: #ffffff;
+        }
+
         .shop-sub {
           height: 65vh;
           display: grid;
@@ -106,6 +111,7 @@ button {
           gap: 3rem;
           padding: 2.5rem 2rem;
           position: absolute;
+          top: 2%;
           left: 50%;
           transform: translateX(-50%);
           background: #ffffff;

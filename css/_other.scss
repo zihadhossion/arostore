@@ -20,7 +20,7 @@
 
       .item {
         width: 100%;
-        max-width: 250px;
+        max-width: 260px;
         font-size: 2rem;
         background-color: #fff;
         text-align: center;
@@ -131,7 +131,7 @@
   background: #fff;
 
   .getContain {
-    width: 600px;
+    max-width: 600px;
 
     .title {
       font-size: 3rem;
@@ -142,7 +142,7 @@
     form {
       display: flex;
       gap: 1rem;
-      margin-top: 10rem;
+      margin-top: 5rem;
 
       input,
       button {
@@ -151,7 +151,7 @@
         border-radius: .6rem;
         outline: none;
         padding: 1rem 2rem;
-        box-shadow: 1px 0px 15px 1px #c0bdbd;
+        box-shadow: 1px 0px 15px 0px #c0bdbd;
       }
 
       input {
@@ -234,16 +234,55 @@
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
   .forYou {
+    padding: 1rem;
+
     .mtitle {
       font-size: 2rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .innerCon {
       .cContain {
         grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .forYou {
+    padding: .5rem;
+  }
+
+  .brand {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-left: 0rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .getNot {
+    .getContain {
+      .title {
+        font-size: 2rem;
+      }
+
+      form {
+        flex-direction: column;
+        margin-top: 3rem;
+
+        input,
+        button {
+          height: 45px;
+          padding: .8rem 1.5rem;
+          box-shadow: 1px 0px 15px 1px #c0bdbd;
+        }
       }
     }
   }

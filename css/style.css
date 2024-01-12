@@ -63,7 +63,6 @@ button {
         opacity: 0;
         transform: scaleY(0);
         transform-origin: 0 0;
-        background: #ffffff;
         min-width: 225px;
         max-width: 1000px;
         position: absolute;
@@ -72,6 +71,9 @@ button {
         transition: all .2s ease-in-out; }
         .nav-links .navLink .dropdown .sub-menu ul li:not(:last-child) {
           margin-bottom: 1.5rem; }
+        .nav-links .navLink .dropdown .sub-menu:first-child, .nav-links .navLink .dropdown .sub-menu:last-child {
+          top: 180%;
+          background: #ffffff; }
         .nav-links .navLink .dropdown .sub-menu .shop-sub {
           height: 65vh;
           display: grid;
@@ -80,6 +82,7 @@ button {
           gap: 3rem;
           padding: 2.5rem 2rem;
           position: absolute;
+          top: 2%;
           left: 50%;
           transform: translateX(-50%);
           background: #ffffff; }
@@ -743,7 +746,8 @@ button {
   .top-sell .title {
     font-size: 3rem;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    margin: 2rem 0; }
   .top-sell .item-container {
     display: flex;
     justify-content: center;
@@ -957,19 +961,18 @@ button {
         .bestitem .cardContain .card article .text a {
           padding: 1rem 2.25rem; }
 
-  .new-item .item article {
-    font-size: .75rem; }
-    .new-item .item article span {
-      padding: .2rem;
-      border-radius: .3rem;
-      margin-bottom: .1rem; }
-    .new-item .item article h1 {
-      font-size: 1.5rem;
-      margin-bottom: .2rem; }
-    .new-item .item article p {
-      margin-bottom: .5rem; }
-    .new-item .item article a {
-      padding: .5rem 1.5rem; } }
+  .new-item {
+    padding: .5rem; }
+    .new-item .item article {
+      font-size: 1rem; }
+      .new-item .item article span,
+      .new-item .item article p {
+        margin-bottom: .5rem; }
+      .new-item .item article h1 {
+        font-size: 1.25rem;
+        margin-bottom: .25rem; }
+      .new-item .item article a {
+        padding: .5rem 1.25rem; } }
 @media (max-width: 300px) {
   .bestitem .cardContain .card article .text span {
     margin-bottom: .5rem; }
@@ -984,21 +987,7 @@ button {
   .top-sell .title {
     font-size: 2rem; }
   .top-sell .item-container .item {
-    padding: .5rem; }
-
-  .new-item .item article {
-    font-size: .75rem; }
-    .new-item .item article span {
-      padding: .2rem;
-      border-radius: .3rem;
-      margin-bottom: .1rem; }
-    .new-item .item article h1 {
-      font-size: 1.5rem;
-      margin-bottom: .2rem; }
-    .new-item .item article p {
-      margin-bottom: .5rem; }
-    .new-item .item article a {
-      padding: .5rem 1.5rem; } }
+    padding: .5rem; } }
 .forYou {
   background: #F7F6F1;
   padding: 3rem; }
@@ -1016,7 +1005,7 @@ button {
       gap: 3rem; }
       .forYou .innerCon .cContain .item {
         width: 100%;
-        max-width: 250px;
+        max-width: 260px;
         font-size: 2rem;
         background-color: #fff;
         text-align: center;
@@ -1090,7 +1079,7 @@ button {
   padding: 1rem;
   background: #fff; }
   .getNot .getContain {
-    width: 600px; }
+    max-width: 600px; }
     .getNot .getContain .title {
       font-size: 3rem;
       font-weight: 700;
@@ -1098,7 +1087,7 @@ button {
     .getNot .getContain form {
       display: flex;
       gap: 1rem;
-      margin-top: 10rem; }
+      margin-top: 5rem; }
       .getNot .getContain form input,
       .getNot .getContain form button {
         height: 50px;
@@ -1106,7 +1095,7 @@ button {
         border-radius: .6rem;
         outline: none;
         padding: 1rem 2rem;
-        box-shadow: 1px 0px 15px 1px #c0bdbd; }
+        box-shadow: 1px 0px 15px 0px #c0bdbd; }
       .getNot .getContain form input {
         width: 100%;
         height: 50px; }
@@ -1147,12 +1136,36 @@ button {
   .forYou .innerCon .cContain {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem; } }
-@media (max-width: 500px) {
-  .forYou .mtitle {
-    font-size: 2rem;
-    margin-bottom: 3rem; }
-  .forYou .innerCon .cContain {
-    grid-template-columns: 1fr; } }
+@media (max-width: 550px) {
+  .forYou {
+    padding: 1rem; }
+    .forYou .mtitle {
+      font-size: 2rem;
+      margin-bottom: 2rem; }
+    .forYou .innerCon .cContain {
+      grid-template-columns: 1fr; } }
+@media (max-width: 400px) {
+  .forYou {
+    padding: .5rem; }
+
+  .brand {
+    margin-top: 1rem;
+    padding: 1rem; }
+    .brand h1 {
+      font-size: 2.5rem;
+      margin-left: 0rem;
+      margin-bottom: 2rem; }
+
+  .getNot .getContain .title {
+    font-size: 2rem; }
+  .getNot .getContain form {
+    flex-direction: column;
+    margin-top: 3rem; }
+    .getNot .getContain form input,
+    .getNot .getContain form button {
+      height: 45px;
+      padding: .8rem 1.5rem;
+      box-shadow: 1px 0px 15px 1px #c0bdbd; } }
 .footer {
   padding: 2rem 0;
   position: relative; }
@@ -1226,12 +1239,22 @@ button {
     gap: 2rem; }
     .footer article div img {
       width: 100%; } }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .footer section {
     padding: 1rem 2rem; }
     .footer section .get-touch {
       text-align: center;
       grid-column: 1/-1;
       margin-bottom: 2rem; } }
+@media (max-width: 400px) {
+  .footer section {
+    margin-bottom: 2rem; }
+    .footer section h2 {
+      margin-bottom: 1rem; }
+    .footer section .links li {
+      margin-bottom: 1rem; }
+  .footer article p {
+    text-align: center;
+    font-size: 1.25rem; } }
 
 /*# sourceMappingURL=style.css.map */
