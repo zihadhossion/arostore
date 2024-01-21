@@ -439,6 +439,12 @@ button {
             margin-bottom: 1rem; }
           .mobileBar .mob-sidebar .menu .sub-list .shop-sub div li {
             margin-bottom: 1.25rem; }
+      .mobileBar .mob-sidebar .menu .submenu1,
+      .mobileBar .mob-sidebar .menu .submenu5 {
+        margin: 0rem 3rem; }
+        .mobileBar .mob-sidebar .menu .submenu1 li,
+        .mobileBar .mob-sidebar .menu .submenu5 li {
+          margin: 1.25rem 0; }
       .mobileBar .mob-sidebar .menu .ssMenu {
         transform: translate3d(-100%, 0, 0);
         visibility: hidden;

@@ -487,6 +487,15 @@
         }
       }
 
+      .submenu1,
+      .submenu5 {
+        margin: 0rem 3rem;
+
+        li {
+          margin: 1.25rem 0;
+        }
+      }
+
       .ssMenu {
         transform: translate3d(-100%, 0, 0);
         visibility: hidden;
