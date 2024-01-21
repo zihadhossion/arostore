@@ -354,7 +354,7 @@
     width: 100%;
     font-size: 1.4rem;
     background: #fff;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2.25rem;
     position: fixed;
     z-index: 99;
 
@@ -363,6 +363,7 @@
     }
 
     .logoBox {
+
       img {
         max-width: 12rem;
         width: 100%;
@@ -613,6 +614,21 @@
 
 @media (max-width:550px) {
   .mobileBar {
+    .nav {
+      .logoBox {
+
+        img {
+          max-width: 10rem;
+          width: 100%;
+        }
+      }
+
+      .icon-bar {
+        display: flex;
+        gap: 1.75rem;
+      }
+    }
+
     .header-fixed {
       padding: 1rem;
     }

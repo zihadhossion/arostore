@@ -106,8 +106,8 @@
 
 .hero {
     width: 100%;
-    margin-top: 5rem;
-    padding: 0 3rem 3rem 3rem;
+    margin-top: 0rem;
+    padding: 0 2rem 2rem 2rem;
     position: relative;
 
     /* Slideshow container */
@@ -191,26 +191,16 @@
     .bottomBar {
         display: none;
     }
-
-    .hero {
-        .heroSwiper {
-            padding: 0.75rem 2rem 2rem 2rem;
-        }
-    }
 }
 
 @media (max-width: 768px) {
     .hero {
-        .heroSwiper {
-            padding: 1rem;
-        }
+        padding: 1rem;
     }
 }
 
 @media (max-width: 550px) {
     .hero {
-        .heroSwiper {
-            padding: 0;
-        }
+        padding: 0;
     }
 }

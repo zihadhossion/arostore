@@ -350,7 +350,7 @@ button {
     width: 100%;
     font-size: 1.4rem;
     background: #fff;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2.25rem;
     position: fixed;
     z-index: 99; }
     .mobileBar .nav i {
@@ -520,6 +520,12 @@ button {
   .mobileBar {
     display: flex !important; } }
 @media (max-width: 550px) {
+  .mobileBar .nav .logoBox img {
+    max-width: 10rem;
+    width: 100%; }
+  .mobileBar .nav .icon-bar {
+    display: flex;
+    gap: 1.75rem; }
   .mobileBar .header-fixed {
     padding: 1rem; } }
 .bottomBar {
@@ -603,8 +609,8 @@ button {
 
 .hero {
   width: 100%;
-  margin-top: 5rem;
-  padding: 0 3rem 3rem 3rem;
+  margin-top: 0rem;
+  padding: 0 2rem 2rem 2rem;
   position: relative;
   /* Slideshow container */ }
   .hero .hero-container {
@@ -661,15 +667,12 @@ button {
 
 @media (max-width: 992px) {
   .bottomBar {
-    display: none; }
-
-  .hero .heroSwiper {
-    padding: 0.75rem 2rem 2rem 2rem; } }
+    display: none; } }
 @media (max-width: 768px) {
-  .hero .heroSwiper {
+  .hero {
     padding: 1rem; } }
 @media (max-width: 550px) {
-  .hero .heroSwiper {
+  .hero {
     padding: 0; } }
 .shop-category {
   width: 100%;
@@ -790,6 +793,7 @@ button {
       background-color: #fff;
       text-align: center;
       padding: 2rem;
+      border-radius: .6rem;
       transition: all .3s linear; }
       .top-sell .item-container .item .dis {
         width: 45px;
@@ -881,7 +885,7 @@ button {
           background-color: #ffb300; }
 
 @media (max-width: 992px) {
-  .shop-category .cate h1 {
+  .shop-category .category .title {
     font-size: 2.75rem; }
 
   .bestitem .cardContain {
@@ -903,9 +907,6 @@ button {
       transform: translateY(-50%);
       padding: .1rem; } }
 @media (max-width: 768px) {
-  .shop-category .cate h1 {
-    font-size: 2.5rem; }
-
   .bestitem {
     margin: 3rem auto;
     padding: 2rem; }
@@ -932,11 +933,11 @@ button {
       .new-item .item article a {
         padding: 1rem 3rem; } }
 @media (max-width: 550px) {
-  .shop-category .cate h1 {
-    font-size: 2.25rem; }
+  .shop-category .category .title {
+    font-size: 2.5rem; }
 
   .bestitem {
-    padding: .5rem; }
+    padding: .75rem; }
     .bestitem .cardContain {
       gap: 1rem; }
       .bestitem .cardContain .card article {
@@ -953,9 +954,11 @@ button {
   .top-sell {
     padding: .5rem; }
     .top-sell .title {
-      font-size: 2.25rem; }
+      font-size: 2.5rem; }
     .top-sell .item-container {
       padding: .5rem; }
+      .top-sell .item-container .item {
+        max-width: 300px; }
 
   .new-item {
     padding: .5rem; }
@@ -972,8 +975,8 @@ button {
       .new-item .item article a {
         padding: .75rem 2rem; } }
 @media (max-width: 400px) {
-  .shop-category .cate h1 {
-    font-size: 2rem; }
+  .shop-category .category .title {
+    font-size: 2.2rem; }
 
   .bestitem .cardContain {
     gap: 1rem; }
@@ -984,6 +987,9 @@ button {
         font-size: 2rem; }
       .bestitem .cardContain .card article .text a {
         padding: 1rem 2.25rem; }
+
+  .top-sell .title {
+    font-size: 2.2rem; }
 
   .new-item .item article {
     font-size: 1rem; }
@@ -1030,7 +1036,8 @@ button {
         font-size: 2rem;
         background-color: #fff;
         text-align: center;
-        padding: 1rem; }
+        padding: 1rem;
+        border-radius: .6rem; }
         .forYou .innerCon .cContain .item .dis {
           width: 45px;
           display: block;
@@ -1149,22 +1156,30 @@ button {
   .forYou {
     padding: .5rem; }
     .forYou .mtitle {
-      font-size: 2.25rem; }
+      font-size: 2.5rem;
+      margin: 2rem 5rem; }
     .forYou .innerCon .cContain {
       grid-template-columns: 1fr; }
-      .forYou .innerCon .cContain .item {
-        max-width: 100%; } }
+
+  .getNot .getContain .title {
+    font-size: 2.5rem; } }
 @media (max-width: 400px) {
+  .forYou .mtitle {
+    font-size: 2.2rem;
+    margin: 3rem; }
+  .forYou .innerCon .cContain {
+    grid-template-columns: 1fr; }
+
   .brand {
     margin-top: 1rem;
     padding: 1rem; }
-    .brand h1 {
-      font-size: 2.5rem;
+    .brand .title {
+      font-size: 2.2rem;
       margin-left: 0rem;
       margin-bottom: 2rem; }
 
   .getNot .getContain .title {
-    font-size: 2rem; }
+    font-size: 2.2rem; }
   .getNot .getContain form {
     flex-direction: column;
     align-items: center;

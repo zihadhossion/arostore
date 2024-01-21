@@ -170,6 +170,7 @@
             background-color: #fff;
             text-align: center;
             padding: 2rem;
+            border-radius: .6rem;
             transition: all .3s linear;
 
             .dis {
@@ -303,8 +304,8 @@
 
 @media (max-width:992px) {
     .shop-category {
-        .cate {
-            h1 {
+        .category {
+            .title {
                 font-size: 2.75rem;
             }
         }
@@ -344,13 +345,6 @@
 }
 
 @media (max-width:768px) {
-    .shop-category {
-        .cate {
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-    }
 
     .bestitem {
         margin: 3rem auto;
@@ -400,15 +394,15 @@
 
 @media (max-width:550px) {
     .shop-category {
-        .cate {
-            h1 {
-                font-size: 2.25rem;
+        .category {
+            .title {
+                font-size: 2.5rem;
             }
         }
     }
 
     .bestitem {
-        padding: .5rem;
+        padding: .75rem;
 
         .cardContain {
             gap: 1rem;
@@ -442,11 +436,15 @@
         padding: .5rem;
 
         .title {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
         }
 
         .item-container {
             padding: .5rem;
+
+            .item {
+                max-width: 300px;
+            }
         }
     }
 
@@ -481,9 +479,9 @@
 
 @media (max-width:400px) {
     .shop-category {
-        .cate {
-            h1 {
-                font-size: 2rem;
+        .category {
+            .title {
+                font-size: 2.2rem;
             }
         }
     }
@@ -508,6 +506,12 @@
                     }
                 }
             }
+        }
+    }
+
+    .top-sell {
+        .title {
+            font-size: 2.2rem;
         }
     }
 
