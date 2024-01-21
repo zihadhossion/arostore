@@ -106,75 +106,82 @@
 
 .hero {
     width: 100%;
-
-    .heroSwiper {
-        padding: 0 3rem 3rem 3rem;
-        position: relative;
-    }
+    margin-top: 5rem;
+    padding: 0 3rem 3rem 3rem;
+    position: relative;
 
     /* Slideshow container */
-    .swiper-wrapper {
+    .hero-container {
         max-width: 1450px;
         width: 100%;
         margin: 0 auto;
-    }
 
-    img {
-        vertical-align: middle;
-        height: 45rem;
-        object-fit: cover;
-    }
+        .hero-slide {
+            position: relative;
 
-    /* Caption text */
-    .text {
-        color: #f2f2f2;
-        background: transparent;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        article {
-            line-height: 10rem;
-
-            .title {
-                font-size: 1.4rem;
-                color: #000;
-                background: #fff;
-                padding: 0.25rem 0.75rem;
-                border: none;
-                border-radius: 0.5rem;
+            img {
+                vertical-align: middle;
+                height: 45rem;
+                object-fit: cover;
             }
 
-            .para {
-                font-size: 2rem;
-                font-weight: 700;
-                line-height: 4rem;
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                background: transparent;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
 
-                span {
-                    font-size: 4rem;
-                    display: block;
+                article {
+                    line-height: 10rem;
+
+                    .title {
+                        font-size: 1.4rem;
+                        background: #fff;
+                        padding: 0.25rem 0.75rem;
+                        border: none;
+                        border-radius: 0.5rem;
+                    }
+
+                    .para {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        line-height: 4rem;
+
+                        span {
+                            font-size: 4rem;
+                            display: block;
+                        }
+                    }
+
+                    .btn {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: #000;
+                        background: #ffb300;
+                        border: none;
+                        border-radius: 0.5rem;
+                        outline: none;
+                        padding: 1.25rem 3.5rem;
+                        transition: all .25s linear;
+
+                        &:hover {
+                            background: #fff;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
+        }
 
-            .btn {
-                font-size: 1.2rem;
-                font-weight: 600;
+        .hero-slide:last-child {
+            .text {
                 color: #000;
-                background: #ffb300;
-                border: none;
-                border-radius: 0.5rem;
-                outline: none;
-                padding: 1.25rem 3.5rem;
-                transition: all .25s linear;
-
-                &:hover {
-                    background: #fff;
-                    cursor: pointer;
-                }
             }
         }
     }
@@ -186,7 +193,7 @@
     }
 
     .hero {
-        .mySlides {
+        .heroSwiper {
             padding: 0.75rem 2rem 2rem 2rem;
         }
     }
@@ -194,16 +201,16 @@
 
 @media (max-width: 768px) {
     .hero {
-        .mySlides {
-            padding: 0.5rem 1.75rem 1.75rem 1.75rem;
+        .heroSwiper {
+            padding: 1rem;
         }
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .hero {
-        .mySlides {
-            padding: 0.1rem 1rem 1rem 1rem;
+        .heroSwiper {
+            padding: 0;
         }
     }
 }

@@ -13,6 +13,16 @@ body {
   width: 100%;
 }
 
+/* the slides */
+.slick-slide {
+  margin: 0 27px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -27px;
+}
+
 a {
   color: #7e7e7e;
   text-decoration: none;
@@ -41,6 +51,32 @@ button {
   outline: none;
 }
 
+//animation is here
+@keyframes moveLR {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//navbar style here
 .nav-links {
   align-self: center;
 

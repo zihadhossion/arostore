@@ -1,12 +1,13 @@
 .forYou {
   background: #F7F6F1;
+  margin: 2rem 0;
   padding: 3rem;
 
   .mtitle {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 7rem;
+    margin: 2rem 7rem;
   }
 
   .innerCon {
@@ -174,31 +175,6 @@
   }
 }
 
-//animation is here
-@keyframes moveLR {
-  0% {
-    transform: translateX(0px);
-  }
-
-  50% {
-    transform: translateX(10px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes showUp {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @media (max-width:992px) {
   .forYou {
     .innerCon {
@@ -236,26 +212,25 @@
 
 @media (max-width:550px) {
   .forYou {
-    padding: 1rem;
+    padding: .5rem;
 
     .mtitle {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 2.25rem;
     }
 
     .innerCon {
       .cContain {
         grid-template-columns: 1fr;
+
+        .item {
+          max-width: 100%;
+        }
       }
     }
   }
 }
 
 @media (max-width:400px) {
-  .forYou {
-    padding: .5rem;
-  }
-
   .brand {
     margin-top: 1rem;
     padding: 1rem;
@@ -275,7 +250,12 @@
 
       form {
         flex-direction: column;
+        align-items: center;
         margin-top: 3rem;
+
+        button {
+          width: 100px;
+        }
 
         input,
         button {

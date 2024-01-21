@@ -1,18 +1,52 @@
-//slider for hero section
-let swiper2 = new Swiper(".heroSwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-  },
+//carousel for hero section
+$('.hero').ready(function () {
+  $('.hero-container').slick({
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 2500,
+  });
 });
 
-// //search appear
-const modal = document.getElementById("myModal");
+//shop-category slider
+$('.shop-category').ready(function () {
+  $('.slide-container').slick({
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplaySpeed: 2500,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+//search bar active
+const modal = document.querySelector("#myModal");
 const closeModal = document.querySelector("#myModal .close");
-const btn = document.getElementById("myBtn");
+const btn = document.querySelector("#myBtn");
 btn.addEventListener("click", () => {
   modal.classList.add("show-modal")
 })
@@ -20,6 +54,7 @@ btn.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   modal.classList.remove("show-modal");
 })
+
 
 //mobile menu bar toggle 
 const menuBtn = document.getElementById("menu-bar");
@@ -81,15 +116,4 @@ const browseCate = document.querySelector(".browse-category");
 browseMenu.addEventListener("click", () => {
   browseCate.classList.toggle("tBrow")
 })
-
-//slider Categories item
-let swiper = new Swiper(".mySwiper", {
-  slidesPerView: 6,
-  centeredSlides: false,
-  spaceBetween: 100,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
-  },
-});
 
